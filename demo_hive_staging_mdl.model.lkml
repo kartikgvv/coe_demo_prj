@@ -11,3 +11,9 @@ explore: demo_stg_test_file {
 
   view_label: ""
 }
+
+explore: demo_stg_aa_data_file {
+  label: "STG_AA_DATA_FILE"
+
+  view_label: ""
+}
