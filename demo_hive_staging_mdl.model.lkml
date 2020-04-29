@@ -17,3 +17,9 @@ explore: demo_stg_aa_data_file {
 
   view_label: ""
 }
+
+explore: demo_stg_country_lookup_adobe_analytics {
+  label: "STG_COUNTRY_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
