@@ -71,3 +71,9 @@ explore: demo_stg_event_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_conn_type_lookup_adobe_analytics {
+  label: "STG_CONN_TYPE_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
