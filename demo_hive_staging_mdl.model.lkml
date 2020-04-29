@@ -53,3 +53,9 @@ explore: demo_stg_referrer_type_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_languages_lookup_adobe_analytics {
+  label: "STG_LANGUAGES_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
