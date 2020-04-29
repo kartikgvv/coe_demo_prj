@@ -23,3 +23,9 @@ explore: demo_stg_country_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_os_lookup_adobe_analytics {
+  label: "STG_OS_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
