@@ -65,3 +65,9 @@ explore: demo_stg_javascript_version_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_event_lookup_adobe_analytics {
+  label: "STG_EVENT_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
