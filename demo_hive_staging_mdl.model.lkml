@@ -41,3 +41,9 @@ explore: demo_stg_search_engine_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_resolution_lookup_adobe_analytics {
+  label: "STG_RESOLUTION_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
