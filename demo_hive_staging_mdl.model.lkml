@@ -59,3 +59,9 @@ explore: demo_stg_languages_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_javascript_version_lookup_adobe_analytics {
+  label: "STG_JAVASCRIPT_VERSION_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
