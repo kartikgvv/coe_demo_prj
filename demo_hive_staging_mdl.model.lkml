@@ -35,3 +35,9 @@ explore: demo_stg_plugins_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_search_engine_lookup_adobe_analytics {
+  label: "STG_SEARCH_ENGINE_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
