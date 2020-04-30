@@ -83,3 +83,9 @@ explore: demo_stg_color_depth_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_coloumn_headers_lookup_adobe_analytics {
+  label: "STG_COLOUMN_HEADERS_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
