@@ -89,3 +89,9 @@ explore: demo_stg_coloumn_headers_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_browser_lookup_adobe_analytics {
+  label: "STG_BROWSER_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
