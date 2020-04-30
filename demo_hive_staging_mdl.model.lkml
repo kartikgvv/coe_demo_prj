@@ -95,3 +95,9 @@ explore: demo_stg_browser_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_browser_type_lookup_adobe_analytics {
+  label: "STG_BROWSER_TYPE_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
