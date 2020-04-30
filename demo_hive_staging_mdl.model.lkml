@@ -77,3 +77,9 @@ explore: demo_stg_conn_type_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_color_depth_lookup_adobe_analytics {
+  label: "STG_COLOR_DEPTH_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
