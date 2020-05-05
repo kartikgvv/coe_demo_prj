@@ -1,10 +1,10 @@
-connection: "demo_hive_staging_conn"
+connection: "coe_demo_athena_staging_conn"
 
 label: "HIVE Staging"
 
 include: "*.view"
 
-include: "*.dashboard"
+#include: "*.dashboard"
 
 explore: demo_stg_test_file {
   label: "STG_TEST_FILE"

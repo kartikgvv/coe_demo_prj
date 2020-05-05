@@ -4,4 +4,4 @@ label: "HIVE Mart"
 
 include: "*.view"
 
-include: "*.dashboard"
+#include: "*.dashboard"

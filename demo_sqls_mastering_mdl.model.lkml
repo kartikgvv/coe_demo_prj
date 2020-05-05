@@ -4,4 +4,4 @@ label: "SQLS Mastering"
 
 include: "*.view"
 
-include: "*.dashboard"
+#include: "*.dashboard"

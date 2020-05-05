@@ -4,4 +4,4 @@ label: "SQLS Staging"
 
 include: "*.view"
 
-include: "*.dashboard"
+#include: "*.dashboard"

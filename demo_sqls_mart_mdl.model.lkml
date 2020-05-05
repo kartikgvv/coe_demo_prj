@@ -4,4 +4,4 @@ label: "SQLS Mart"
 
 include: "*.view"
 
-include: "*.dashboard"
+#include: "*.dashboard"

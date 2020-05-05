@@ -4,4 +4,4 @@ label: "HIVE Mastering"
 
 include: "*.view"
 
-include: "*.dashboard"
+#include: "*.dashboard"
