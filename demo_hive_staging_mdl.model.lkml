@@ -101,3 +101,9 @@ explore: demo_stg_browser_type_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_test_hit_file {
+  label: "STG_TEST_HIT_FILE"
+
+  view_label: ""
+}
