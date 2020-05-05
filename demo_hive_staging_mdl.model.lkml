@@ -77,3 +77,34 @@ explore: demo_stg_conn_type_lookup_adobe_analytics {
 
   view_label: ""
 }
+
+
+explore: demo_stg_color_depth_lookup_adobe_analytics {
+  label: "STG_COLOR_DEPTH_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
+
+explore: demo_stg_coloumn_headers_lookup_adobe_analytics {
+  label: "STG_COLOUMN_HEADERS_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
+
+explore: demo_stg_browser_lookup_adobe_analytics {
+  label: "STG_BROWSER_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
+
+explore: demo_stg_browser_type_lookup_adobe_analytics {
+  label: "STG_BROWSER_TYPE_LOOKUP_ADOBE_ANALYTICS"
+
+  view_label: ""
+}
+
+explore: demo_stg_test_hit_file {
+  label: "STG_TEST_HIT_FILE"
+
+  view_label: ""
+}
