@@ -182,7 +182,7 @@ sql: ${TABLE}.daily_visitor ;;
 }
 
 dimension: date_time {
-type: string
+type: date
 sql: ${TABLE}.date_time ;;
 }
 
