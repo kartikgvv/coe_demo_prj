@@ -76,6 +76,11 @@ type: number
 sql: ${TABLE}.is_neustar_enriched ;;
 }
 
+dimension: multiple_email_append {
+type: yesno
+sql: if(${TABLE}.email_sha2} != "null"AND ${TABLE}.email_sha3} != "null",1,0) ;;
+}
+
 measure: count {
 type: count
 drill_fields: []

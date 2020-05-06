@@ -1,4 +1,4 @@
-connection: "demo_hive_mastering_conn"
+connection: "coe_demo_athena_mastering_conn"
 
 label: "HIVE Mastering"
 
