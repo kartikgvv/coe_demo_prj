@@ -18,3 +18,14 @@ explore: demo_f_neustar_identity_denormalised {
 
   view_label: "Extended Profile Using Neustar (Denorm)"
 }
+
+explore: stg_customer_profile_data{
+  join: f_neustar_identity_normalised {
+    type: full_outer
+    sql_on: ${f_neustar_identity_normalised.mdpid} = ${stg_customer_profile_data.swid} ;;
+    relationship: one_to_one
+  }
+  label: "Customer_Profile_Enriched"
+
+  view_label: "Customer Profile Data"
+}
