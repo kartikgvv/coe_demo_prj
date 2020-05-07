@@ -96,7 +96,7 @@ view: demo_mb_f_neustar_identity_normalised {
     type: string
     sql: CASE
           WHEN demo_mb_stg_customer_profile_data.name_known = 'Known' THEN 'Known'
-          WHEN demo_mb_stg_customer_profile_data.name_known = 'Unknown' AND demo_mb_f_neustar_identity_normalised.last_name !=null THEN 'Known'
+          WHEN demo_mb_stg_customer_profile_data.name_known = 'Unknown' AND ${TABLE}.last_name != '' THEN 'Known'
           ELSE 'Unknown' END ;;
   }
 
