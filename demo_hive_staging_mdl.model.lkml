@@ -112,3 +112,14 @@ explore: demo_stg_test_hit_file {
 
   view_label: ""
 }
+
+explore: demo_mb_stg_customer_profile_data{
+  join: demo_mb_f_neustar_identity_normalised {
+    type: full_outer
+    sql_on: ${demo_mb_stg_customer_profile_data.swid}=${demo_mb_f_neustar_identity_normalised.mdpid} ;;
+    relationship: one_to_one
+  }
+  label: "Customer_Profile_Enriched"
+
+  view_label: "Customer Profile Data"
+}

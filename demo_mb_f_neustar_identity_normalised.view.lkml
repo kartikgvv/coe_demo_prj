@@ -1,4 +1,4 @@
-view: f_neustar_identity_normalised {
+view: demo_mb_f_neustar_identity_normalised {
   sql_table_name: demo_mart.f_neustar_identity_normalised ;;
   suggestions: no
 
