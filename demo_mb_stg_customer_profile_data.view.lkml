@@ -60,8 +60,9 @@ view: demo_mb_stg_customer_profile_data {
   dimension: name_known {
     type: string
     sql: CASE
-          WHEN ${TABLE}.last_name != '' THEN 'Known'
-          ELSE 'Unknown' END ;;
+          WHEN ${TABLE}.last_name = '' THEN 'Unknown'
+          WHEN ${TABLE}.last_name = '*' THEN 'Unknown'
+          ELSE 'Known' END ;;
   }
 
   measure: count {
