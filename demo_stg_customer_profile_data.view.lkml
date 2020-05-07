@@ -1,6 +1,6 @@
 view: stg_customer_profile_data {
   sql_table_name: demo_staging.stg_customer_profile_data ;;
-  suggestions: no
+  suggestions: yes
 
   dimension: country {
     type: string

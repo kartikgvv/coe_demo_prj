@@ -182,8 +182,18 @@ sql: ${TABLE}.daily_visitor ;;
 }
 
 dimension: date_time {
-type: date
+type: string
 sql: ${TABLE}.date_time ;;
+}
+
+dimension: date {
+  type: date
+  sql: ${date_time} ;;
+}
+
+dimension: time {
+  type: date_hour_of_day
+  sql: ${date_time} ;;
 }
 
 dimension: domain {
@@ -1522,7 +1532,7 @@ sql: ${TABLE}.geo_region ;;
 }
 
 dimension: geo_zip {
-type: number
+type: zipcode
 sql: ${TABLE}.geo_zip ;;
 }
 

@@ -6,6 +6,10 @@ include: "*.view"
 
 #include: "*.dashboard"
 
+explore: stg_customer_profile_data {
+  label: "CRM - Customer Profile Data"
+  view_label: "CRM - Customer Profile Data"
+}
 explore: demo_stg_test_file {
   label: "STG_TEST_FILE"
 
