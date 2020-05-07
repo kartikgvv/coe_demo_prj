@@ -65,6 +65,13 @@ view: demo_mb_stg_customer_profile_data {
           ELSE 'Known' END ;;
   }
 
+  dimension: zip_known {
+    type: string
+    sql: CASE
+          WHEN ${TABLE}.postal_code = '' THEN 'Unknown'
+          ELSE 'Known' END ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [first_name, last_name]
