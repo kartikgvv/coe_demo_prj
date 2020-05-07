@@ -85,10 +85,12 @@ view: demo_mb_f_neustar_identity_normalised {
 
   dimension: validated_gender {
     type: string
-    sql: if(${demo_mb_stg_customer_profile_data.gender}="M","M",
-  if(${demo_mb_stg_customer_profile_data.gender}="F","F",
-    if(${demo_mb_stg_customer_profile_data.gender}="U" AND ${TABLE}.gender}="M","M",
-      if(${demo_mb_stg_customer_profile_data.gender}="U" AND ${TABLE}.gender}="F","F","U")))) ;;
+    sql: CASE
+    WHEN demo_mb_stg_customer_profile_data.gender = 'M' THEN 'M'
+    WHEN demo_mb_stg_customer_profile_data.gender = 'F' THEN 'F'
+    WHEN demo_mb_stg_customer_profile_data.gender = 'U' AND demo_mb_f_neustar_identity_normalised.gender = 'M' THEN 'M'
+    WHEN demo_mb_stg_customer_profile_data.gender = 'U' AND demo_mb_f_neustar_identity_normalised.gender = 'F' THEN 'F'
+    ELSE 'U' END ;;
   }
 
   measure: count {
