@@ -83,6 +83,14 @@ view: demo_mb_f_neustar_identity_normalised {
     sql: ${TABLE}.zip ;;
   }
 
+  dimension: validated_gender {
+    type: string
+    sql: if(${demo_mb_stg_customer_profile_data.gender}="M","M",
+  if(${demo_mb_stg_customer_profile_data.gender}="F","F",
+    if(${demo_mb_stg_customer_profile_data.gender}="U" AND ${demo_mb_f_neustar_identity_normalised.gender}="M","M",
+      if(${demo_mb_stg_customer_profile_data.gender}="U" AND ${demo_mb_f_neustar_identity_normalised.gender}="F","F","U")))) ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [first_name, last_name]
