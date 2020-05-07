@@ -1,6 +1,6 @@
 connection: "coe_demo_athena_staging_conn"
 
-label: "HIVE Staging"
+label: "Raw Data Lake"
 
 include: "*.view"
 
@@ -10,11 +10,11 @@ explore: stg_customer_profile_data {
   label: "CRM - Customer Profile Data"
   view_label: "CRM - Customer Profile Data"
 }
-explore: demo_stg_test_file {
-  label: "STG_TEST_FILE"
-
-  view_label: ""
-}
+#explore: demo_stg_test_file {
+#  label: "STG_TEST_FILE"
+#
+#  view_label: ""
+#}
 
 explore: demo_stg_aa_data_file {
   label: "STG_AA_DATA_FILE"

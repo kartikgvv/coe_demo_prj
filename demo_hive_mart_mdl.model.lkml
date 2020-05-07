@@ -1,6 +1,6 @@
 connection: "coe_demo_athena_mart_conn"
 
-label: "HIVE Mart"
+label: "Aggregates & Reports (Mart)"
 
 include: "*.view"
 
