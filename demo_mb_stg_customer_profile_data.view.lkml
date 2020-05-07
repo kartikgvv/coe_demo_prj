@@ -57,6 +57,12 @@ view: demo_mb_stg_customer_profile_data {
     type: string
     sql: ${TABLE}.title ;;
   }
+  dimension: name_known {
+    type: string
+    sql: CASE
+          WHEN ${TABLE}.last_name != '' THEN 'Known'
+          ELSE 'Unknown' END ;;
+  }
 
   measure: count {
     type: count
