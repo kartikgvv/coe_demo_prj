@@ -184,9 +184,15 @@ view: demo_stg_analytics_hits {
   }
 
   dimension: date_time {
-    type: string
-    sql: ${TABLE}.date_time ;;
+    type: date_time
+    sql: cast(${TABLE}.date_time as timestamp)  ;;
   }
+
+  dimension: date {
+    type: date
+    sql: ${date_time} ;;
+  }
+
 
   dimension: domain {
     type: string
@@ -1524,7 +1530,7 @@ view: demo_stg_analytics_hits {
   }
 
   dimension: geo_zip {
-    type: string
+    type: zipcode
     sql: ${TABLE}.geo_zip ;;
   }
 
@@ -4454,7 +4460,7 @@ view: demo_stg_analytics_hits {
   }
 
   dimension: post_t_time_info {
-    type: string
+    type: date
     sql: ${TABLE}.post_t_time_info ;;
   }
 
