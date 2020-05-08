@@ -16,8 +16,8 @@ explore: stg_customer_profile_data {
 #  view_label: ""
 #}
 
-explore: demo_stg_aa_data_file {
-  label: "STG_AA_DATA_FILE"
+explore: demo_stg_analytics_hits {
+  label: "RAW_CLICKSTREAM"
 
   view_label: ""
 }
@@ -107,11 +107,7 @@ explore: demo_stg_browser_type_lookup_adobe_analytics {
   view_label: ""
 }
 
-explore: demo_stg_test_hit_file {
-  label: "STG_TEST_HIT_FILE"
 
-  view_label: ""
-}
 
 explore: demo_mb_stg_customer_profile_data{
   join: demo_mb_f_neustar_identity_normalised {
