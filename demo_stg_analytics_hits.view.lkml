@@ -193,6 +193,11 @@ view: demo_stg_analytics_hits {
     sql: cast(${date_time} as timestamp)  ;;
   }
 
+  dimension: time {
+    type: date_time_of_day
+    sql:  cast(${date_time} as timestamp) ;;
+  }
+
 
   dimension: domain {
     type: string
