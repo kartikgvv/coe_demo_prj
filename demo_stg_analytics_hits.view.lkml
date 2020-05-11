@@ -188,11 +188,15 @@ view: demo_stg_analytics_hits {
     sql: cast(${TABLE}.date_time as timestamp)  ;;
   }
 
-  dimension: date {
-    type: date
+  dimension: date_time2 {
+    type: string
     sql: ${date_time} ;;
   }
 
+  dimension: date {
+    type: date
+    sql: ${date_time2} ;;
+  }
 
   dimension: domain {
     type: string
