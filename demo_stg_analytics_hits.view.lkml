@@ -184,19 +184,15 @@ view: demo_stg_analytics_hits {
   }
 
   dimension: date_time {
-    type: date_time
-    sql: cast(${TABLE}.date_time as timestamp)  ;;
-  }
-
-  dimension: date_time2 {
     type: string
-    sql: ${date_time} ;;
+    sql: ${TABLE}.date_time  ;;
   }
 
   dimension: date {
     type: date
-    sql: ${date_time2} ;;
+    sql: cast(${date_time} as timestamp)  ;;
   }
+
 
   dimension: domain {
     type: string
