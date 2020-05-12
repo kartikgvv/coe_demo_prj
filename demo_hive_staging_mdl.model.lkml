@@ -119,3 +119,10 @@ explore: demo_mb_stg_customer_profile_data{
 
   view_label: "Customer Profile Data"
 }
+
+
+explore: demo_stg_campaign_response_bounce {
+  label: "STG_CAMPAIGN_RESPONSE_BOUNCE"
+
+  view_label: ""
+}
