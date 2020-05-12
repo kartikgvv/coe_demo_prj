@@ -126,3 +126,9 @@ explore: demo_stg_campaign_response_bounce {
 
   view_label: ""
 }
+
+explore: demo_stg_campaign_response_openclicks {
+  label: "STG_CAMPAIGN_RESPONSE_OPENCLICKS"
+
+  view_label: ""
+}
