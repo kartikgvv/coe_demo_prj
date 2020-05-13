@@ -18,3 +18,9 @@ explore: demo_f_neustar_identity_denormalised {
 
   view_label: "Extended Profile Using Neustar (Denorm)"
 }
+
+explore: demo_neustar_enhanced_sample_records {
+  label: "Sample Full Profile"
+
+  view_label: "Fully Extended Profile Using Neustar"
+}
