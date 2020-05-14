@@ -597,10 +597,10 @@ view: f_neustar_enriched_dataset {
     type: string
     sql: CASE
           WHEN ${customer_age} < 25 THEN 'Under 25'
-          WHEN ${customer_age} >= 25 AND ${TABLE}.customer_age < 35 THEN '25 - 35'
-          WHEN  ${customer_age} >= 35 AND ${TABLE}.customer_age < 45 THEN '35 - 45'
-          WHEN  ${customer_age} >= 45 AND ${TABLE}.customer_age < 55 THEN '45 - 55'
-          WHEN  ${customer_age} >= 55 AND ${TABLE}.customer_age < 65 THEN '55 - 65'
+          WHEN ${customer_age} >= 25 AND ${customer_age} < 35 THEN '25 - 35'
+          WHEN  ${customer_age} >= 35 AND ${customer_age} < 45 THEN '35 - 45'
+          WHEN  ${customer_age} >= 45 AND ${customer_age} < 55 THEN '45 - 55'
+          WHEN  ${customer_age} >= 55 AND ${customer_age} < 65 THEN '55 - 65'
           WHEN  ${customer_age} < 64 THEN '65+'
           ELSE 'Unknown' END ;;
   }
