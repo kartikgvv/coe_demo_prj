@@ -8,8 +8,8 @@ view: f_neustar_enriched_dataset {
   }
 
   dimension: current_email_linkage_score {
-    type: string
-    sql: ${TABLE}.current_email_linkage_score ;;
+    type: number
+    sql: cast(${TABLE}.current_email_linkage_score AS bigint) ;;
   }
 
   dimension: customer_activity_date {
@@ -63,9 +63,10 @@ view: f_neustar_enriched_dataset {
   }
 
   dimension: customer_age {
-    type: string
-    sql: ${TABLE}.customer_age ;;
+    type: number
+    sql: cast(${TABLE}.customer_age as BIGINT) ;;
   }
+
 
   dimension: customer_based_statistical_areas_cbsa {
     type: string
@@ -569,18 +570,18 @@ view: f_neustar_enriched_dataset {
           ELSE 'U' END ;;
   }
 
-  dimension: enriched_zip {
+  dimension: corrected_zip {
     type: string
     sql: CASE
-          WHEN demo_mb_stg_customer_profile_data.postal_code != ${TABLE}.customer_zip_code THEN 'Enriched'
-          ELSE 'Matching' END ;;
+          WHEN demo_mb_stg_customer_profile_data.postal_code != ${TABLE}.customer_zip_code THEN 'Corrected'
+          ELSE 'Unchanged' END ;;
   }
 
-  dimension: enriched_name {
+  dimension: corrected_name {
     type: string
     sql: CASE
-          WHEN demo_mb_stg_customer_profile_data.last_name != ${TABLE}.customer_last_name THEN 'Enriched'
-          ELSE 'Matching' END ;;
+          WHEN demo_mb_stg_customer_profile_data.last_name != ${TABLE}.customer_last_name THEN 'Corrected'
+          ELSE 'Unchanged' END ;;
   }
 
   dimension: email_in_use {
@@ -590,6 +591,28 @@ view: f_neustar_enriched_dataset {
           WHEN ${TABLE}.current_email_linkage_score = 50 THEN 'Household Level Match'
           WHEN ${TABLE}.current_email_linkage_score > 50 THEN 'Current Individual Match'
           ELSE 'Unknown' END ;;
+  }
+
+  dimension: customer_age_range {
+    type: string
+    sql: CASE
+          WHEN ${TABLE}.customer_age < 25 THEN 'Under 25'
+          WHEN ${TABLE}.customer_age >= 25 AND ${TABLE}.customer_age < 35 THEN '25 - 35'
+          WHEN ${TABLE}.customer_age >= 35 AND ${TABLE}.customer_age < 45 THEN '35 - 45'
+          WHEN ${TABLE}.customer_age >= 45 AND ${TABLE}.customer_age < 55 THEN '45 - 55'
+          WHEN ${TABLE}.customer_age >= 55 AND ${TABLE}.customer_age < 65 THEN '55 - 65'
+          WHEN ${TABLE}.customer_age < 64 THEN '65+'
+          ELSE 'Unknown' END ;;
+  }
+
+  dimension: offline_campaign_profile{
+    type: string
+    sql: CASE
+         WHEN demo_mb_stg_customer_profile_data.last_name = '' AND ${TABLE}.customer_last_name = ''THEN 'Unknown'
+         WHEN demo_mb_stg_customer_profile_data.last_name = '*' AND ${TABLE}.customer_last_name = ''THEN 'Unknown'
+         WHEN demo_mb_stg_customer_profile_data.last_name IS NULL AND ${TABLE}.customer_last_name = ''THEN 'Unknown'
+         WHEN LENGTH(demo_mb_stg_customer_profile_data.last_name ) = 0 AND ${TABLE}.customer_last_name = ''THEN 'Unknown'
+         ELSE 'Known' END ;;
   }
 
   measure: count {
