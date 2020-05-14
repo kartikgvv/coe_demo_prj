@@ -24,3 +24,10 @@ explore: demo_neustar_enhanced_sample_records {
 
   view_label: "Fully Extended Profile Using Neustar"
 }
+
+
+explore: demo_f_neustar_enriched_dataset {
+  label: "F_NEUSTAR_ENRICHED_DATASET"
+
+  view_label: ""
+}
