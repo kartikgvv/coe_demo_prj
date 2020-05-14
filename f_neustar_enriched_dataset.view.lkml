@@ -587,21 +587,21 @@ view: f_neustar_enriched_dataset {
   dimension: email_in_use {
     type: string
     sql: CASE
-          WHEN ${TABLE}.current_email_linkage_score < 50 THEN 'Low Quality'
-          WHEN ${TABLE}.current_email_linkage_score = 50 THEN 'Household Level Match'
-          WHEN ${TABLE}.current_email_linkage_score > 50 THEN 'Current Individual Match'
+          WHEN ${current_email_linkage_score} < 50 THEN 'Low Quality'
+          WHEN ${current_email_linkage_score} = 50 THEN 'Household Level Match'
+          WHEN ${current_email_linkage_score}. > 50 THEN 'Current Individual Match'
           ELSE 'Unknown' END ;;
   }
 
   dimension: customer_age_range {
     type: string
     sql: CASE
-          WHEN ${TABLE}.customer_age < 25 THEN 'Under 25'
-          WHEN ${TABLE}.customer_age >= 25 AND ${TABLE}.customer_age < 35 THEN '25 - 35'
-          WHEN ${TABLE}.customer_age >= 35 AND ${TABLE}.customer_age < 45 THEN '35 - 45'
-          WHEN ${TABLE}.customer_age >= 45 AND ${TABLE}.customer_age < 55 THEN '45 - 55'
-          WHEN ${TABLE}.customer_age >= 55 AND ${TABLE}.customer_age < 65 THEN '55 - 65'
-          WHEN ${TABLE}.customer_age < 64 THEN '65+'
+          WHEN ${customer_age} < 25 THEN 'Under 25'
+          WHEN ${customer_age} >= 25 AND ${TABLE}.customer_age < 35 THEN '25 - 35'
+          WHEN  ${customer_age} >= 35 AND ${TABLE}.customer_age < 45 THEN '35 - 45'
+          WHEN  ${customer_age} >= 45 AND ${TABLE}.customer_age < 55 THEN '45 - 55'
+          WHEN  ${customer_age} >= 55 AND ${TABLE}.customer_age < 65 THEN '55 - 65'
+          WHEN  ${customer_age} < 64 THEN '65+'
           ELSE 'Unknown' END ;;
   }
 
