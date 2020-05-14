@@ -67,8 +67,8 @@ sql: ${TABLE}.customer_gender_match ;;
 }
 
 dimension: customer_age {
-type: string
-sql: ${TABLE}.customer_age ;;
+type: number
+sql: cast(${TABLE}.customer_age as smallint) ;;
 }
 
 dimension: customer_person_type {
