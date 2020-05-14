@@ -64,7 +64,7 @@ view: f_neustar_enriched_dataset {
 
   dimension: customer_age {
     type: number
-    sql: cast(${TABLE}.customer_age as BIGINT) ;;
+    sql: cast(${TABLE}.customer_age as smallint) ;;
   }
 
 
