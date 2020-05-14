@@ -1,5 +1,5 @@
-view: demo_neustar_enhanced_sample_records {
-  sql_table_name: demo_mart.neustar_enhanced_sample_records ;;
+view: f_neustar_enriched_dataset {
+  sql_table_name: demo_mart.f_neustar_enriched_dataset ;;
   suggestions: no
 
   dimension: address_linkage_score {
@@ -8,8 +8,8 @@ view: demo_neustar_enhanced_sample_records {
   }
 
   dimension: current_email_linkage_score {
-    type: number
-    sql: cast(${TABLE}.current_email_linkage_score as bigint) ;;
+    type: string
+    sql: ${TABLE}.current_email_linkage_score ;;
   }
 
   dimension: customer_activity_date {
@@ -203,7 +203,7 @@ view: demo_neustar_enhanced_sample_records {
   }
 
   dimension: customer_dob {
-    type: string
+    type: number
     sql: ${TABLE}.customer_dob ;;
   }
 
@@ -507,6 +507,11 @@ view: demo_neustar_enhanced_sample_records {
     sql: ${TABLE}.customer_zip_code ;;
   }
 
+  dimension: dataset_instance_id {
+    type: number
+    sql: ${TABLE}.dataset_instance_id ;;
+  }
+
   dimension: e1_segment {
     type: string
     sql: ${TABLE}.e1_segment ;;
@@ -527,9 +532,9 @@ view: demo_neustar_enhanced_sample_records {
     sql: ${TABLE}.is_neustar_matched ;;
   }
 
-  dimension: swid {
+  dimension: mdpid {
     type: string
-    sql: ${TABLE}.swid ;;
+    sql: ${TABLE}.mdpid ;;
   }
 
   dimension: system_email_match {

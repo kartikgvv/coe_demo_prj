@@ -62,6 +62,8 @@ view: demo_mb_stg_customer_profile_data {
     sql: CASE
           WHEN ${TABLE}.last_name = '' THEN 'Unknown'
           WHEN ${TABLE}.last_name = '*' THEN 'Unknown'
+          WHEN ${TABLE}.last_name IS NULL THEN 'Unknown'
+          WHEN LENGTH(${TABLE}.last_name ) = 0 THEN 'Unknown'
           ELSE 'Known' END ;;
   }
 
