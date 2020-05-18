@@ -1,4 +1,5 @@
 view: f_neustar_enriched_dataset {
+  label:"Neustar Validation DataSet"
   sql_table_name: demo_mart.f_neustar_enriched_dataset ;;
   suggestions: no
 
