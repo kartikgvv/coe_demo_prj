@@ -1504,6 +1504,8 @@ view: demo_stg_analytics_hits {
     sql: ${TABLE}.first_hit_ref_type ;;
   }
 
+
+
   dimension: first_hit_referrer {
     type: string
     sql: ${TABLE}.first_hit_referrer ;;
@@ -5842,6 +5844,11 @@ view: demo_stg_analytics_hits {
   measure: count {
     type: count
     drill_fields: [detail*]
+  }
+
+  measure: Hit_source_percentage {
+    type: percent_of_total
+    sql: ${first_hit_ref_type} ;;
   }
 
   # ----- Sets of fields for drilling ------

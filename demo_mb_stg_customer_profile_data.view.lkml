@@ -44,7 +44,7 @@ view: demo_mb_stg_customer_profile_data {
   }
 
   dimension: postal_code {
-    type: string
+    type: zipcode
     sql: ${TABLE}.postal_code ;;
   }
 

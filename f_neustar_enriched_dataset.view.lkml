@@ -9,7 +9,7 @@ view: f_neustar_enriched_dataset {
 
   dimension: current_email_linkage_score {
     type: number
-    sql: cast(${TABLE}.current_email_linkage_score AS bigint) ;;
+    sql: CAST(${TABLE}.current_email_linkage_score AS DECIMAL(28, 16)) ;;
   }
 
   dimension: customer_activity_date {
@@ -40,31 +40,37 @@ view: f_neustar_enriched_dataset {
   dimension: customer_address_rbdi {
     type: string
     sql: ${TABLE}.customer_address_rbdi ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_address_type {
     type: string
     sql: ${TABLE}.customer_address_type ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_address_vacant {
     type: string
     sql: ${TABLE}.customer_address_vacant ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_addressline_one {
     type: string
     sql: ${TABLE}.customer_addressline_one ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_addressline_two {
     type: string
     sql: ${TABLE}.customer_addressline_two ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_age {
     type: number
     sql: cast(${TABLE}.customer_age as smallint) ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
 
@@ -76,6 +82,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_business_owner {
     type: string
     sql: ${TABLE}.customer_business_owner ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_buying_power_score {
@@ -186,11 +193,13 @@ view: f_neustar_enriched_dataset {
   dimension: customer_country {
     type: string
     sql: ${TABLE}.customer_country ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_country_of_origin {
     type: string
     sql: ${TABLE}.customer_country_of_origin ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_country_size_code {
@@ -201,11 +210,13 @@ view: f_neustar_enriched_dataset {
   dimension: customer_current_home_value {
     type: string
     sql: ${TABLE}.customer_current_home_value ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_dob {
     type: number
     sql: ${TABLE}.customer_dob ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_dob_match {
@@ -221,6 +232,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_dwelling_type {
     type: string
     sql: ${TABLE}.customer_dwelling_type ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_dwelling_unit_size {
@@ -236,6 +248,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_education {
     type: string
     sql: ${TABLE}.customer_education ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_ekey {
@@ -246,6 +259,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_estimated_household_income_broad {
     type: string
     sql: ${TABLE}.customer_estimated_household_income_broad ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_estimated_household_income_narrow {
@@ -256,6 +270,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_ethnicity {
     type: string
     sql: ${TABLE}.customer_ethnicity ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_ethnicity_group {
@@ -291,6 +306,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_home_business {
     type: string
     sql: ${TABLE}.customer_home_business ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_home_land_value {
@@ -306,6 +322,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_household_city {
     type: string
     sql: ${TABLE}.customer_household_city ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_household_composition {
@@ -341,6 +358,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_language_preference_code {
     type: string
     sql: ${TABLE}.customer_language_preference_code ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_last_name {
@@ -361,21 +379,25 @@ view: f_neustar_enriched_dataset {
   dimension: customer_mail_responder {
     type: string
     sql: ${TABLE}.customer_mail_responder ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_marital_status {
     type: string
     sql: ${TABLE}.customer_marital_status ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_median_family_household_income {
     type: string
     sql: ${TABLE}.customer_median_family_household_income ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_median_home_value {
     type: string
     sql: ${TABLE}.customer_median_home_value ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_middle_name_match {
@@ -391,26 +413,31 @@ view: f_neustar_enriched_dataset {
   dimension: customer_noofadultliving {
     type: string
     sql: ${TABLE}.customer_noofadultliving ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_noofchildrenliving {
     type: string
     sql: ${TABLE}.customer_noofchildrenliving ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_noofpersonsliving {
     type: string
     sql: ${TABLE}.customer_noofpersonsliving ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_occupation_group {
     type: string
     sql: ${TABLE}.customer_occupation_group ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_person_type {
     type: string
     sql: ${TABLE}.customer_person_type ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_phone_active {
@@ -441,16 +468,19 @@ view: f_neustar_enriched_dataset {
   dimension: customer_phone_number {
     type: string
     sql: ${TABLE}.customer_phone_number ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_premium_credit_card {
     type: string
     sql: ${TABLE}.customer_premium_credit_card ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_presence_of_credit_card {
     type: string
     sql: ${TABLE}.customer_presence_of_credit_card ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_property_realty_indicator {
@@ -481,16 +511,19 @@ view: f_neustar_enriched_dataset {
   dimension: customer_response_credit_flag {
     type: string
     sql: ${TABLE}.customer_response_credit_flag ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_response_occupation {
     type: string
     sql: ${TABLE}.customer_response_occupation ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_state {
     type: string
     sql: ${TABLE}.customer_state ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_statistical_area_type {
@@ -587,16 +620,16 @@ view: f_neustar_enriched_dataset {
   dimension: email_in_use {
     type: string
     sql: CASE
-          WHEN ${current_email_linkage_score} < 50 THEN 'Low Quality'
-          WHEN ${current_email_linkage_score} = 50 THEN 'Household Level Match'
-          WHEN ${current_email_linkage_score}. > 50 THEN 'Current Individual Match'
+          WHEN ${current_email_linkage_score} < 50 THEN 'Poor'
+          WHEN ${current_email_linkage_score} = 50 THEN 'Good'
+          WHEN ${current_email_linkage_score} > 50 THEN 'Great'
           ELSE 'Unknown' END ;;
   }
 
   dimension: customer_age_range {
     type: string
     sql: CASE
-          WHEN ${customer_age} < 25 THEN 'Under 25'
+          WHEN ${customer_age} <= 24 THEN '24 and Under'
           WHEN ${customer_age} >= 25 AND ${customer_age} < 35 THEN '25 - 35'
           WHEN  ${customer_age} >= 35 AND ${customer_age} < 45 THEN '35 - 45'
           WHEN  ${customer_age} >= 45 AND ${customer_age} < 55 THEN '45 - 55'
@@ -605,14 +638,30 @@ view: f_neustar_enriched_dataset {
           ELSE 'Unknown' END ;;
   }
 
+  measure: age_range_percentage {
+    type: percent_of_total
+    sql: ${customer_age_range} ;;
+  }
+
   dimension: offline_campaign_profile{
     type: string
     sql: CASE
-         WHEN demo_mb_stg_customer_profile_data.last_name = '' AND ${TABLE}.customer_last_name = ''THEN 'Unknown'
-         WHEN demo_mb_stg_customer_profile_data.last_name = '*' AND ${TABLE}.customer_last_name = ''THEN 'Unknown'
-         WHEN demo_mb_stg_customer_profile_data.last_name IS NULL AND ${TABLE}.customer_last_name = ''THEN 'Unknown'
-         WHEN LENGTH(demo_mb_stg_customer_profile_data.last_name ) = 0 AND ${TABLE}.customer_last_name = ''THEN 'Unknown'
+         WHEN ${TABLE}.name_known = "Known"
          ELSE 'Known' END ;;
+  }
+
+  dimension: active_phone_range {
+    type: string
+    sql: CASE
+          WHEN ${customer_phone_active} = 'Active for 12 months or longer' THEN 'Active More Than 6mo Ago'
+          WHEN ${customer_phone_active} = 'Active for between 7-9 months' OR ${customer_phone_active} = 'Active for between 10-11 months' THEN 'Active More Than 6mo Ago'
+          WHEN ${customer_phone_active} = 'Active for between 4-6 months' OR ${customer_phone_active} = 'Active for 3 months' OR ${customer_phone_active} = 'Active for 2 months'THEN 'Active Less Than 6mo Ago'
+          WHEN ${customer_phone_active} = 'Active for 1 month or less' THEN 'Newly Active'
+          WHEN ${customer_phone_active} = 'Inactive for 12 months or longer OR Status Unknown' THEN 'Inactive'
+          WHEN ${customer_phone_active} = 'Inactive for between 7-9 months' OR ${customer_phone_active} = 'Inactive for between 10-11 months' THEN 'Inactive'
+          WHEN ${customer_phone_active} = 'Inactive for between 4-6 months' OR ${customer_phone_active} = 'Inactive for 3 months' OR ${customer_phone_active} = 'Inactive for 2 months'THEN 'Inactive'
+          WHEN ${customer_phone_active} = 'Inactive for 1 month or less' THEN 'Inactive'
+          ELSE 'Unknown' END ;;
   }
 
   measure: count {
