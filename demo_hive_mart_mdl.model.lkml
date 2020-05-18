@@ -27,7 +27,7 @@ explore: demo_neustar_enhanced_sample_records {
 
 
 explore: demo_f_neustar_enriched_dataset {
-  label: "F_NEUSTAR_ENRICHED_DATASET"
+  label: "Neustar Validation DataSet"
 
   view_label: ""
 }
