@@ -31,3 +31,10 @@ explore: demo_f_neustar_enriched_dataset {
 
   view_label: ""
 }
+
+
+explore: demo_fa_session {
+  label: "FA_SESSION"
+
+  view_label: ""
+}
