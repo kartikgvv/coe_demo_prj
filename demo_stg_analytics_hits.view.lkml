@@ -194,7 +194,7 @@ view: demo_stg_analytics_hits {
   }
 
   dimension: time {
-    type: date_time_of_day
+    type: date_hour_of_day
     sql:  cast(${date_time} as timestamp) ;;
   }
 
@@ -1523,6 +1523,7 @@ view: demo_stg_analytics_hits {
 
   dimension: geo_country {
     type: string
+    map_layer_name: countries
     sql: ${TABLE}.geo_country ;;
   }
 
@@ -5846,9 +5847,9 @@ view: demo_stg_analytics_hits {
     drill_fields: [detail*]
   }
 
-  measure: Hit_source_percentage {
+  measure: first_Hit_ref_percentage {
     type: percent_of_total
-    sql: ${first_hit_ref_type} ;;
+    sql: count(${first_hit_ref_type}) ;;
   }
 
   # ----- Sets of fields for drilling ------

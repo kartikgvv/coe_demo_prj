@@ -31,3 +31,8 @@ explore: demo_f_neustar_enriched_dataset {
 
   view_label: ""
 }
+
+explore: fa_session {
+  label: "FA Session Website"
+  view_label: ""
+}
