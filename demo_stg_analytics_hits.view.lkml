@@ -5852,6 +5852,16 @@ view: demo_stg_analytics_hits {
     sql: count(${first_hit_ref_type}) ;;
   }
 
+  measure: geo_country_percentage {
+    type: percent_of_total
+    sql: count(${geo_country}) ;;
+  }
+
+  measure: percentage_of_count {
+    type: percent_of_total
+    sql: count(${TABLE}) ;;
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [

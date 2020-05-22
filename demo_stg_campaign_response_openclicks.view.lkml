@@ -31,6 +31,17 @@ type: string
 sql: ${TABLE}.date_record_created ;;
 }
 
+dimension: day_record_created {
+    type: date
+    sql: ${date_record_created} ;;
+  }
+
+
+dimension: time_record_created {
+  type: date_time_of_day
+  sql: ${date_record_created} ;;
+}
+
 dimension: pc_dataset_instance_id {
 type: number
 sql: ${TABLE}.pc_dataset_instance_id ;;
@@ -40,4 +51,8 @@ measure: count {
 type: count
 drill_fields: []
 }
+
+
+
+
 }
