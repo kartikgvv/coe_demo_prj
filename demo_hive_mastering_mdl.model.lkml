@@ -12,3 +12,9 @@ explore: demo_vw_control_profiles {
 
   view_label: ""
 }
+
+explore: demo_vw_db_mcvisid_mdpid {
+  label: "VW_DB_MCVISID_MDPID"
+
+  view_label: ""
+}
