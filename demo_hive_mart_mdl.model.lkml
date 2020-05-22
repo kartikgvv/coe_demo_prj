@@ -38,3 +38,9 @@ explore: demo_fa_session {
 
   view_label: ""
 }
+
+explore: demo_individual_engagement_signals {
+  label: "INDIVIDUAL_ENGAGEMENT_SIGNALS"
+
+  view_label: ""
+}
