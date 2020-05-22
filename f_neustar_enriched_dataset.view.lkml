@@ -538,8 +538,9 @@ view: f_neustar_enriched_dataset {
   }
 
   dimension: customer_zip_code {
-    type: string
+    type: zipcode
     sql: ${TABLE}.customer_zip_code ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: dataset_instance_id {
@@ -641,15 +642,15 @@ view: f_neustar_enriched_dataset {
 
   measure: age_range_percentage {
     type: percent_of_total
-    sql: ${customer_age_range} ;;
+    sql: count(${customer_age_range}) ;;
   }
 
-  dimension: offline_campaign_profile{
-    type: string
-    sql: CASE
-         WHEN ${TABLE}.name_known = "Known"
-         ELSE 'Known' END ;;
-  }
+dimension: offline_campaign_profile{
+  type: string
+  sql: CASE
+          WHEN ${name_known} = 'Known' AND ${zip_known} = 'Known' THEN 'Available'
+          ELSE 'Unavailable' END ;;
+}
 
   dimension: active_phone_range {
     type: string

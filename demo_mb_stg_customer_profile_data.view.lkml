@@ -28,6 +28,17 @@ view: demo_mb_stg_customer_profile_data {
     sql: ${TABLE}.gender ;;
   }
 
+  dimension: persona {
+    type: string
+    sql: ${TABLE}.gender ;;
+    html:
+        {% if gender._value == "M" %}
+        <img src="https://i.ya-webdesign.com/images/avatar-png-1.png" width="200" height="200" >
+        {% elsif brand._value == "F" %}
+        <img src="https://i.ya-webdesign.com/images/female-avatar-png-5.png" width="200" height="200" >
+        {% endif %} ;;
+  }
+
   dimension: last_name {
     type: string
     sql: ${TABLE}.last_name ;;
@@ -46,6 +57,7 @@ view: demo_mb_stg_customer_profile_data {
   dimension: postal_code {
     type: zipcode
     sql: ${TABLE}.postal_code ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: red;">{{ value }}</p>;;
   }
 
   dimension: swid {
@@ -72,6 +84,13 @@ view: demo_mb_stg_customer_profile_data {
     sql: CASE
           WHEN ${TABLE}.postal_code = '' THEN 'Unknown'
           ELSE 'Known' END ;;
+  }
+
+  dimension: offline_campaign_profile{
+    type: string
+    sql: CASE
+          WHEN ${name_known} = 'Known' AND ${zip_known} = 'Known' THEN 'Available'
+          ELSE 'Unavailable' END ;;
   }
 
   measure: count {
