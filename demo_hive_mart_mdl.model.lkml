@@ -37,3 +37,10 @@ explore: demo_individual_engagement_signals {
 
   view_label: ""
 }
+
+
+explore: demo_vw_engagement_model_training {
+  label: "VW_ENGAGEMENT_MODEL_TRAINING"
+
+  view_label: ""
+}
