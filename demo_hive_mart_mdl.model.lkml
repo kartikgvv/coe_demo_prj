@@ -28,11 +28,12 @@ explore: demo_neustar_enhanced_sample_records {
 
 explore: demo_f_neustar_enriched_dataset {
   label: "Neustar Validation DataSet"
-
   view_label: ""
 }
 
-explore: fa_session {
-  label: "FA Session Website"
+
+explore: demo_individual_engagement_signals {
+  label: "INDIVIDUAL_ENGAGEMENT_SIGNALS"
+
   view_label: ""
 }
