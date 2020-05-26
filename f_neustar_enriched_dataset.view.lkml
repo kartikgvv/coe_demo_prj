@@ -344,6 +344,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_household_hhid {
     type: string
     sql: ${TABLE}.customer_household_hhid ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_household_match_type {
