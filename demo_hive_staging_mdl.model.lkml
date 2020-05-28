@@ -132,3 +132,10 @@ explore: demo_stg_campaign_response_openclicks {
 
   view_label: ""
 }
+
+
+explore: demo_stg_reporting {
+  label: "STG_REPORTING"
+
+  view_label: ""
+}
