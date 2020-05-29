@@ -44,3 +44,9 @@ explore: demo_vw_engagement_model_training {
 
   view_label: ""
 }
+
+explore: demo_stg_models_output_data__cluster_labels {
+  label: "STG_MODELS_OUTPUT_DATA__CLUSTER_LABELS"
+
+  view_label: ""
+}
