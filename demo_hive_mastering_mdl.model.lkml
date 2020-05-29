@@ -18,3 +18,9 @@ explore: demo_vw_db_mcvisid_mdpid {
 
   view_label: ""
 }
+
+explore: demo_db_hubspotutk_vid {
+  label: "DB_HUBSPOTUTK_VID"
+
+  view_label: ""
+}
