@@ -139,3 +139,9 @@ explore: demo_stg_reporting {
 
   view_label: ""
 }
+
+explore: demo_stg_neustar_cif_data {
+  label: "STG_NEUSTAR_CIF_DATA"
+
+  view_label: ""
+}
