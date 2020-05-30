@@ -145,3 +145,9 @@ explore: demo_stg_neustar_cif_data {
 
   view_label: ""
 }
+
+explore: demo_stg_all_contacts {
+  label: "STG_ALL_CONTACTS"
+
+  view_label: ""
+}
