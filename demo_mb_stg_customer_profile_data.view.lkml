@@ -34,7 +34,7 @@ view: demo_mb_stg_customer_profile_data {
     html:
         {% if gender._value == "M" %}
         <img src="https://i.ya-webdesign.com/images/avatar-png-1.png" width="200" height="200" >
-        {% elsif brand._value == "F" %}
+        {% elsif gender._value == "F" %}
         <img src="https://i.ya-webdesign.com/images/female-avatar-png-5.png" width="200" height="200" >
         {% endif %} ;;
   }
@@ -62,7 +62,7 @@ view: demo_mb_stg_customer_profile_data {
 
   dimension: mdpid {
     type: string
-    sql: ${TABLE}.mdpid ;;
+    sql: ${TABLE}.swid ;;
   }
 
   dimension: title {

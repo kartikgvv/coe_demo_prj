@@ -50,7 +50,7 @@ view: stg_customer_profile_data {
 
   dimension: mdpid {
     type: string
-    sql: ${TABLE}.mdpid ;;
+    sql: ${TABLE}.swid ;;
   }
 
   dimension: title {
