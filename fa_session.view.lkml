@@ -1,5 +1,6 @@
 view: fa_session {
   sql_table_name: demo_mart.fa_session ;;
+  label: "Wesbsite Session data"
   suggestions: no
 
   dimension: browser {

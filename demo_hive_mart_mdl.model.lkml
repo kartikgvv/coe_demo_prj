@@ -50,3 +50,9 @@ explore: demo_stg_models_output_data__cluster_labels {
 
   view_label: ""
 }
+
+explore: demo_fa_session {
+  label: "Website Session data"
+
+  view_label: ""
+}

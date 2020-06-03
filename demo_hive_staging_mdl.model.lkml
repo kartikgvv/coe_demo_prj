@@ -112,7 +112,7 @@ explore: demo_stg_browser_type_lookup_adobe_analytics {
 explore: demo_mb_stg_customer_profile_data{
   join: f_neustar_enriched_dataset {
     type: inner
-    sql_on: ${demo_mb_stg_customer_profile_data.swid}=${f_neustar_enriched_dataset.mdpid} ;;
+    sql_on: ${demo_mb_stg_customer_profile_data.mdpid}=${f_neustar_enriched_dataset.mdpid} ;;
     relationship: one_to_one
   }
   label: "MB Customer_Profile_Enriched"

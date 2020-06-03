@@ -48,9 +48,9 @@ view: stg_customer_profile_data {
     sql: ${TABLE}.postal_code ;;
   }
 
-  dimension: swid {
+  dimension: mdpid {
     type: string
-    sql: ${TABLE}.swid ;;
+    sql: ${TABLE}.mdpid ;;
   }
 
   dimension: title {

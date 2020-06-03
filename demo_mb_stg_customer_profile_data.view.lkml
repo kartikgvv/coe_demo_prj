@@ -60,9 +60,9 @@ view: demo_mb_stg_customer_profile_data {
     html:   <p style="color:#eff3f6; font-weight: bold; background: red;">{{ value }}</p>;;
   }
 
-  dimension: swid {
+  dimension: mdpid {
     type: string
-    sql: ${TABLE}.swid ;;
+    sql: ${TABLE}.mdpid ;;
   }
 
   dimension: title {
