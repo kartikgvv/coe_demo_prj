@@ -667,7 +667,73 @@ dimension: offline_campaign_profile{
           ELSE 'Unknown' END ;;
   }
 
-  measure: count {
+  dimension: segment_one {
+    type: string
+    sql: ${TABLE}.e1_segment ;;
+    html:
+        {% if e1_segment._value == "105" %}
+        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/alarm-clock-icon-png-6.png" width="30" height="30" >   Recent Visitor </p>
+        {% endif %} ;;
+  }
+
+  dimension: segment_two {
+    type: string
+    sql: ${TABLE}.e1_segment ;;
+    html:
+        {% if e1_segment._value == "105" %}
+        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/money-icon-png-10.png" width="30" height="30" >   VIP Customer </p>
+        {% endif %} ;;
+  }
+
+  dimension: segment_three {
+    type: string
+    sql: ${TABLE}.e1_segment ;;
+    html:
+        {% if e1_segment._value == "105" %}
+        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/shopping-cart-icon-png-4.png" width="30" height="30" >   Recent Abandoned Transaction </p>
+        {% endif %} ;;
+  }
+
+  dimension: segment_four {
+    type: string
+    sql: ${TABLE}.e1_segment ;;
+    html:
+        {% if e1_segment._value == "105" %}
+        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/upward-graph-png-6.png" width="30" height="30" >   Cross-Brand Acquisition Target</p>
+        {% endif %} ;;
+  }
+
+  dimension: segment_five {
+    type: string
+    sql: ${TABLE}.e1_segment ;;
+    html:
+        {% if e1_segment._value == "105" %}
+        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/flat-funnel-icon-png-7.png" width="30" height="30" >   Medium Churn Risk </p>
+        {% endif %} ;;
+  }
+
+  dimension: engagement_score {
+    type: number
+    sql: CASE
+          WHEN ${e1_segment} = '105' THEN '8.4'
+          ELSE 'Unknown' END ;;
+  }
+
+  dimension: ltv {
+    type: number
+    sql: CASE
+          WHEN ${e1_segment} = '105' THEN '7.1'
+          ELSE 'Unknown' END ;;
+  }
+
+  dimension: churn_risk {
+    type: number
+    sql: CASE
+          WHEN ${e1_segment} = '105' THEN '6.6'
+          ELSE 'Unknown' END ;;
+  }
+
+measure: count {
     type: count
     drill_fields: [customer_first_name, customer_last_name]
   }
