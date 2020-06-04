@@ -164,3 +164,9 @@ explore: demo_stg_transactions {
 
   view_label: ""
 }
+
+explore: demo_stg_dmp_segment_mapping {
+  label: "STG_DMP_SEGMENT_MAPPING"
+
+  view_label: ""
+}
