@@ -157,3 +157,28 @@ explore: stg_adobe_campaign_openclicks_data {
 
   view_label: ""
 }
+
+
+explore: demo_stg_transactions {
+  label: "STG_TRANSACTIONS"
+
+  view_label: ""
+}
+
+explore: demo_stg_dmp_segment_mapping {
+  label: "STG_DMP_SEGMENT_MAPPING"
+
+  view_label: ""
+}
+
+explore: demo_stg_dmp_segment_map_norm {
+  label: "STG_DMP_SEGMENT_MAP_NORM"
+
+  view_label: ""
+}
+
+explore: demo_stg_dmp_first_party_user_match {
+  label: "STG_DMP_FIRST_PARTY_USER_MATCH"
+
+  view_label: ""
+}
