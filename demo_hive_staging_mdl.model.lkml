@@ -157,3 +157,10 @@ explore: stg_adobe_campaign_openclicks_data {
 
   view_label: ""
 }
+
+
+explore: demo_stg_transactions {
+  label: "STG_TRANSACTIONS"
+
+  view_label: ""
+}
