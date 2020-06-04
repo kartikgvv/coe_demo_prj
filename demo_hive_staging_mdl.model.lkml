@@ -170,3 +170,9 @@ explore: demo_stg_dmp_segment_mapping {
 
   view_label: ""
 }
+
+explore: demo_stg_dmp_segment_map_norm {
+  label: "STG_DMP_SEGMENT_MAP_NORM"
+
+  view_label: ""
+}
