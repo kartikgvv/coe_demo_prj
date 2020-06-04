@@ -700,6 +700,15 @@ dimension: offline_campaign_profile{
           ELSE 'Unknown' END ;;
   }
 
+  dimension: high_engager {
+    type: string
+    sql: ${TABLE}.e1_segment ;;
+    html:
+        {% if e1_segment._value == "105" %}
+        <div><img style="text-align: center;" src="https://i.ya-webdesign.com/images/line-graph-png-16.png" width="50" height="50" ></div><p style="text-align: center; font-weight: bold; font-size: 20px;">High Engagement</p><p style="text-align: center; font-size: 20px;">This user shows above average <br>engagement with your brand</p>
+        {% endif %} ;;
+  }
+
 measure: count {
     type: count
     drill_fields: [customer_first_name, customer_last_name]
