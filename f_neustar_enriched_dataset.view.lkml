@@ -207,6 +207,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_dob {
     type: number
     sql: ${TABLE}.customer_dob ;;
+    value_format: "0000-00"
   }
 
   dimension: customer_dob_match {
