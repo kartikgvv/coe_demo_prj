@@ -152,8 +152,8 @@ explore: demo_stg_all_contacts {
   view_label: ""
 }
 
-explore: fa_session {
-  label: "Wesbite sessions"
+explore: stg_adobe_campaign_openclicks_data {
+  label: "Email Campaigns"
 
   view_label: ""
 }

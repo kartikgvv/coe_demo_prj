@@ -54,8 +54,4 @@ view: stg_adobe_campaign_openclicks_data {
     drill_fields: []
   }
 
-  measure: sumofsent {
-    type: sum_distinct
-    sql: ${last_click_date} ;;
-  }
 }
