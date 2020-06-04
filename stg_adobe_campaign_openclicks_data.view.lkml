@@ -54,4 +54,19 @@ view: stg_adobe_campaign_openclicks_data {
     drill_fields: []
   }
 
+
+  measure: totalclicked {
+    type: number
+    sql: count(${last_click_date}) ;;
+  }
+
+  measure: totalopened {
+    type: number
+    sql: count(${last_open_date}) ;;
+  }
+
+  measure: totalsent {
+    type: percent_of_total
+    sql: count(${event_date_id}) ;;
+  }
 }
