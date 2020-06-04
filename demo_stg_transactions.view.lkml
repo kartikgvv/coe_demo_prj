@@ -12,12 +12,13 @@ sql: ${TABLE}.mdpid ;;
 }
 
 dimension: date {
-type: string
+type: number
 sql: ${TABLE}.date ;;
+value_format: "0000-00-00"
 }
 
 dimension: amount_spent {
-type: string
+type: number
 sql: ${TABLE}.amount_spent ;;
 }
 
@@ -32,7 +33,7 @@ sql: ${TABLE}.credit_card_type ;;
 }
 
 dimension: store_postal_code {
-type: string
+type: zipcode
 sql: ${TABLE}.store_postal_code ;;
 }
 

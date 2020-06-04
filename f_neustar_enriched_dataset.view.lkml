@@ -709,6 +709,15 @@ dimension: offline_campaign_profile{
         {% endif %} ;;
   }
 
+  dimension: premium_card_user {
+    type: string
+    sql: ${TABLE}.e1_segment ;;
+    html:
+        {% if e1_segment._value == "105" %}
+        <div><img style="text-align: center;" src="https://i.ya-webdesign.com/images/credit-card-icon-png-9.png" width="50" height="50" ></div><p style="text-align: center; font-weight: bold; font-size: 20px;">Premium Card</p><p style="text-align: center; font-size: 20px;">This user makes above average <br>transactions using a premium card</p>
+        {% endif %} ;;
+  }
+
 measure: count {
     type: count
     drill_fields: [customer_first_name, customer_last_name]
