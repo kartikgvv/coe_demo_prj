@@ -151,3 +151,9 @@ explore: demo_stg_all_contacts {
 
   view_label: ""
 }
+
+explore: fa_session {
+  label: "Wesbite sessions"
+
+  view_label: ""
+}
