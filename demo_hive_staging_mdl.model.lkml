@@ -176,3 +176,9 @@ explore: demo_stg_dmp_segment_map_norm {
 
   view_label: ""
 }
+
+explore: demo_stg_dmp_first_party_user_match {
+  label: "STG_DMP_FIRST_PARTY_USER_MATCH"
+
+  view_label: ""
+}
