@@ -182,3 +182,9 @@ explore: demo_stg_dmp_first_party_user_match {
 
   view_label: ""
 }
+
+explore: demo_email_campaign_type_mapping {
+  label: "EMAIL_CAMPAIGN_TYPE_MAPPING"
+
+  view_label: ""
+}
