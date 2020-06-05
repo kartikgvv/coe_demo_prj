@@ -188,3 +188,9 @@ explore: demo_email_campaign_type_mapping {
 
   view_label: ""
 }
+
+explore: demo_stg_crm__contacts {
+  label: "STG_CRM__CONTACTS"
+
+  view_label: ""
+}
