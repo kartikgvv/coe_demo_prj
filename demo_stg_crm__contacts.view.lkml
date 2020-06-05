@@ -1,5 +1,5 @@
 view: demo_stg_crm__contacts {
-label: "Hubspot - Contacts"
+label: "Hubspot Contacts"
 sql_table_name: STG_CRM__CONTACTS ;;
 
 dimension: dataset_instance_id {
