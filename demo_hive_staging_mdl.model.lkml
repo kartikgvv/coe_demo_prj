@@ -194,3 +194,9 @@ explore: demo_stg_crm__contacts {
 
   view_label: ""
 }
+
+explore: demo_stg_contact_activity {
+  label: "STG_CONTACT_ACTIVITY"
+
+  view_label: ""
+}
