@@ -58,7 +58,8 @@ explore: fa_session {
 }
 
 explore: email_campaign_type_mapping {
-  label: "Email Campaign type"
+  label: "Email Campaign activity"
+
 
   view_label: ""
 }
