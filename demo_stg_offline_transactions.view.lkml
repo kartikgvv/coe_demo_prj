@@ -1,4 +1,4 @@
-view: stg_offline_transactions {
+view: demo_stg_offline_transactions {
   sql_table_name: demo_staging.stg_offline_transactions ;;
   suggestions: no
 

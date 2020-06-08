@@ -201,7 +201,7 @@ explore: demo_stg_contact_activity {
   view_label: ""
 }
 
-explore: stg_offline_transactions {
+explore: demo_stg_offline_transactions {
   label: "STG_OFFLINE_TRANSACTIONS"
 
   view_label: ""
