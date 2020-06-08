@@ -206,3 +206,10 @@ explore: demo_stg_offline_transactions {
 
   view_label: ""
 }
+
+
+explore: demo_stg_contact_analytics {
+  label: "STG_CONTACT_ANALYTICS"
+
+  view_label: ""
+}
