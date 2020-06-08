@@ -159,8 +159,8 @@ explore: stg_adobe_campaign_openclicks_data {
 }
 
 
-explore: demo_stg_transactions {
-  label: "STG_TRANSACTIONS"
+explore: stg_offline_transactions {
+  label: "STG_OFFLINE_TRANSACTIONS"
 
   view_label: ""
 }
