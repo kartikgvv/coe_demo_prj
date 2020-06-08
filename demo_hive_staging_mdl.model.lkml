@@ -160,7 +160,7 @@ explore: stg_adobe_campaign_openclicks_data {
 
 
 explore: demo_stg_transactions {
-  label: "STG_OFFLINE_TRANSACTIONS"
+  label: "STG_TRANSACTIONS"
 
   view_label: ""
 }
@@ -197,6 +197,12 @@ explore: demo_stg_crm__contacts {
 
 explore: demo_stg_contact_activity {
   label: "STG_CONTACT_ACTIVITY"
+
+  view_label: ""
+}
+
+explore: stg_offline_transactions {
+  label: "STG_OFFLINE_TRANSACTIONS"
 
   view_label: ""
 }
