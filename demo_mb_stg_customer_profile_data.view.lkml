@@ -33,9 +33,9 @@ view: demo_mb_stg_customer_profile_data {
     sql: ${TABLE}.gender ;;
     html:
         {% if gender._value == "M" %}
-        <img src="https://i.ya-webdesign.com/images/avatar-png-1.png" width="200" height="200" >
+        <img src="https://i.ya-webdesign.com/images/avatar-png-1.png" width="90" height="90" >
         {% elsif gender._value == "F" %}
-        <img src="https://i.ya-webdesign.com/images/female-avatar-png-5.png" width="200" height="200" >
+        <img src="https://i.ya-webdesign.com/images/female-avatar-png-5.png" width="90" height="90" >
         {% endif %} ;;
   }
 
