@@ -24,3 +24,9 @@ explore: demo_db_hubspotutk_vid {
 
   view_label: ""
 }
+
+explore: demo_vw_mdpid_mdpid_mapping {
+  label: "VW_MDPID_MDPID_MAPPING"
+
+  view_label: ""
+}
