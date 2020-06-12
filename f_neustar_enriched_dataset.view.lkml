@@ -639,7 +639,7 @@ dimension: offline_campaign_profile{
     sql: ${TABLE}.e1_segment ;;
     html:
         {% if e1_segment._value == "105" %}
-        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/alarm-clock-icon-png-6.png" width="30" height="30" >   Recent Visitor </p>
+        <p style="margin: 5px 0; font-weight: bold; font-size: 14px;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/alarm-clock-icon-png-6.png" width="30" height="30" >   Recent Visitor </p>
         {% endif %} ;;
   }
 
@@ -648,7 +648,7 @@ dimension: offline_campaign_profile{
     sql: ${TABLE}.e1_segment ;;
     html:
         {% if e1_segment._value == "105" %}
-        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/money-icon-png-10.png" width="30" height="30" >   VIP Customer </p>
+        <p style="margin: 5px 0; font-weight: bold; font-size: 14px;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/money-icon-png-10.png" width="30" height="30" >   VIP Customer </p>
         {% endif %} ;;
   }
 
@@ -657,7 +657,7 @@ dimension: offline_campaign_profile{
     sql: ${TABLE}.e1_segment ;;
     html:
         {% if e1_segment._value == "105" %}
-        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/shopping-cart-icon-png-4.png" width="30" height="30" >   Recent Abandoned Transaction </p>
+        <p style="margin: 5px 0; font-weight: bold; font-size: 14px;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/shopping-cart-icon-png-4.png" width="30" height="30" >   Recent Abandoned Transaction </p>
         {% endif %} ;;
   }
 
@@ -666,7 +666,7 @@ dimension: offline_campaign_profile{
     sql: ${TABLE}.e1_segment ;;
     html:
         {% if e1_segment._value == "105" %}
-        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/upward-graph-png-6.png" width="30" height="30" >   Cross-Brand Acquisition Target</p>
+        <p style="margin: 5px 0; font-weight: bold; font-size: 14px;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/upward-graph-png-6.png" width="30" height="30" >   Cross-Brand Acquisition Target</p>
         {% endif %} ;;
   }
 
@@ -675,7 +675,7 @@ dimension: offline_campaign_profile{
     sql: ${TABLE}.e1_segment ;;
     html:
         {% if e1_segment._value == "105" %}
-        <p style="margin: 5px 0; font-weight: bold;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/flat-funnel-icon-png-7.png" width="30" height="30" >   Medium Churn Risk </p>
+        <p style="margin: 5px 0; font-weight: bold; font-size: 14px;"><img style="margin-right: 5px;" src="https://i.ya-webdesign.com/images/flat-funnel-icon-png-7.png" width="30" height="30" >   Medium Churn Risk </p>
         {% endif %} ;;
   }
 
