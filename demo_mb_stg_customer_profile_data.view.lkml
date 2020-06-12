@@ -6,6 +6,7 @@ view: demo_mb_stg_customer_profile_data {
     type: string
     map_layer_name: countries
     sql: ${TABLE}.country ;;
+    html:   <p style="font-size:30px;">{{ value }}</p>;;
   }
 
   dimension: dataset_instance_id {
@@ -26,6 +27,7 @@ view: demo_mb_stg_customer_profile_data {
   dimension: gender {
     type: string
     sql: ${TABLE}.gender ;;
+    html:   <p style="font-size:30px;">{{ value }}</p>;;
   }
 
   dimension: persona {
