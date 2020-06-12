@@ -63,3 +63,10 @@ explore: email_campaign_type_mapping {
 
   view_label: ""
 }
+
+
+explore: demo_vw_vid_mdpid_mapping {
+  label: "VW_VID_MDPID_MAPPING"
+
+  view_label: ""
+}
