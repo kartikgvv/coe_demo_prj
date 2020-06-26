@@ -70,3 +70,9 @@ explore: demo_vw_vid_mdpid_mapping {
 
   view_label: ""
 }
+
+explore: demo_vw_neustarenriched_mdpid_mapping {
+  label: "VW_NEUSTARENRICHED_MDPID_MAPPING"
+
+  view_label: ""
+}
