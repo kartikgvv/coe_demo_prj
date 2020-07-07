@@ -76,3 +76,11 @@ explore: demo_vw_neustarenriched_mdpid_mapping {
 
   view_label: ""
 }
+
+explore: demo_vw_mdpid_utk_mapping {
+  label: "mdpid_utk_mapping"
+
+  description: "mdpid_utk_mapping"
+
+  view_label: ""
+}
