@@ -84,3 +84,11 @@ explore: demo_vw_mdpid_utk_mapping {
 
   view_label: ""
 }
+
+explore: demo_vw_crm_vid_mdpid_mapping {
+  label: "crm_vid mdpid mapping"
+
+  description: "mapping from crm contacts table of vid with mdpid"
+
+  view_label: ""
+}
