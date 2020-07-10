@@ -92,3 +92,11 @@ explore: demo_vw_crm_vid_mdpid_mapping {
 
   view_label: ""
 }
+
+explore: demo_vw_crm_vid_utk_mapping {
+  label: "crm_vid_utk_mapping"
+
+  description: "mapping between vid and utk for creating first name attribute"
+
+  view_label: ""
+}
