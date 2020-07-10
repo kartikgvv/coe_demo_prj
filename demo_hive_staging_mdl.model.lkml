@@ -229,3 +229,11 @@ explore: demo_stg_android_installs_report {
 
   view_label: ""
 }
+
+explore: demo_stg_ios_installs_report {
+  label: "Stage Dataset for iOS installs report"
+
+  description: "Stage Dataset for iOS installs report iOS installs report"
+
+  view_label: ""
+}
