@@ -221,3 +221,11 @@ explore: demo_stg_appsflyer_android_in_app_events_report {
 
   view_label: ""
 }
+
+explore: demo_stg_android_installs_report {
+  label: "Stage Dataset for android installs report"
+
+  description: "Stage Dataset for android installs report android installs report"
+
+  view_label: ""
+}
