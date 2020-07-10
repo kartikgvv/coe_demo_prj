@@ -237,3 +237,11 @@ explore: demo_stg_ios_installs_report {
 
   view_label: ""
 }
+
+explore: demo_stg_android_uninstalls_report {
+  label: "Stage Dataset for android uninstalls report"
+
+  description: "Stage Dataset for android uninstalls report android uninstalls report"
+
+  view_label: ""
+}
