@@ -213,3 +213,11 @@ explore: demo_stg_contact_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_appsflyer_android_in_app_events_report {
+  label: "Stage Dataset for appsflyer android in app events report"
+
+  description: "Stage Dataset for appsflyer android in app events report appsflyer android in app events report"
+
+  view_label: ""
+}
