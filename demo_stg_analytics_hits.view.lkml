@@ -1,5 +1,6 @@
 view: demo_stg_analytics_hits {
   sql_table_name: demo_staging.stg_analytics_hits ;;
+  label: "Website Hit Data"
   suggestions: no
 
   dimension: accept_language {

@@ -17,7 +17,7 @@ explore: stg_customer_profile_data {
 #}
 
 explore: demo_stg_analytics_hits {
-  label: "RAW_CLICKSTREAM"
+  label: "Website Hit Data"
 
   view_label: ""
 }
