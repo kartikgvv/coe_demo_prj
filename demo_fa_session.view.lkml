@@ -1,283 +1,303 @@
 view: demo_fa_session {
-sql_table_name: FA_SESSION ;;
+  sql_table_name: demo_mart.fa_session ;;
+  label: "Website Session"
+  suggestions: no
 
-dimension: dataset_instance_id {
-type: number
-sql: ${TABLE}.dataset_instance_id ;;
-}
+  dimension: browser {
+    type: string
+    sql: ${TABLE}.browser ;;
+  }
 
-dimension: session_id {
-type: string
-sql: ${TABLE}.session_id ;;
-}
+  dimension: browser_height {
+    type: number
+    sql: ${TABLE}.browser_height ;;
+  }
 
-dimension: session_start_dt {
-type: string
-sql: ${TABLE}.session_start_dt ;;
-}
+  dimension: browser_width {
+    type: number
+    sql: ${TABLE}.browser_width ;;
+  }
 
-dimension: session_end_dt {
-type: string
-sql: ${TABLE}.session_end_dt ;;
-}
+  dimension: connection_type {
+    type: string
+    sql: ${TABLE}.connection_type ;;
+  }
 
-dimension: num_pages {
-type: number
-sql: ${TABLE}.num_pages ;;
-}
+  dimension: cookies_enabled {
+    type: string
+    sql: ${TABLE}.cookies_enabled ;;
+  }
 
-dimension: session_duration_in_sec {
-type: number
-sql: ${TABLE}.session_duration_in_sec ;;
-}
+  dimension: country_ip_based {
+    type: string
+    sql: ${TABLE}.country_ip_based ;;
+  }
 
-dimension: ref_domain {
-type: string
-sql: ${TABLE}.ref_domain ;;
-}
+  dimension: dataset_instance_id {
+    type: number
+    sql: ${TABLE}.dataset_instance_id ;;
+  }
 
-dimension: browser {
-type: string
-sql: ${TABLE}.browser ;;
-}
+  dimension: first_hit_page_url {
+    type: string
+    sql: ${TABLE}.first_hit_page_url ;;
+  }
 
-dimension: browser_width {
-type: number
-sql: ${TABLE}.browser_width ;;
-}
+  dimension: first_hit_pagename {
+    type: string
+    sql: ${TABLE}.first_hit_pagename ;;
+  }
 
-dimension: browser_height {
-type: number
-sql: ${TABLE}.browser_height ;;
-}
+  dimension: first_hit_ref_domain {
+    type: string
+    sql: ${TABLE}.first_hit_ref_domain ;;
+  }
 
-dimension: portrait_mode {
-type: number
-sql: ${TABLE}.portrait_mode ;;
-}
+  dimension: first_hit_ref_type {
+    type: string
+    sql: ${TABLE}.first_hit_ref_type ;;
+  }
 
-dimension: os {
-type: string
-sql: ${TABLE}.os ;;
-}
+  dimension: first_hit_referrer {
+    type: string
+    sql: ${TABLE}.first_hit_referrer ;;
+  }
 
-dimension: connection_type {
-type: string
-sql: ${TABLE}.connection_type ;;
-}
+  dimension: geo_city {
+    type: string
+    sql: ${TABLE}.geo_city ;;
+  }
 
-dimension: cookies_enabled {
-type: string
-sql: ${TABLE}.cookies_enabled ;;
-}
+  dimension: geo_country_initials {
+    type: string
+    sql: ${TABLE}.geo_country_initials ;;
+  }
 
-dimension: country_ip_based {
-type: string
-sql: ${TABLE}.country_ip_based ;;
-}
+  dimension: geo_demographic_area {
+    type: string
+    sql: ${TABLE}.geo_demographic_area ;;
+  }
 
-dimension: isp {
-type: string
-sql: ${TABLE}.isp ;;
-}
+  dimension: geo_region {
+    type: string
+    sql: ${TABLE}.geo_region ;;
+  }
 
-dimension: first_hit_page_url {
-type: string
-sql: ${TABLE}.first_hit_page_url ;;
-}
+  dimension: geo_zip {
+    type: string
+    sql: ${TABLE}.geo_zip ;;
+  }
 
-dimension: first_hit_pagename {
-type: string
-sql: ${TABLE}.first_hit_pagename ;;
-}
+  dimension: hubspot_cookie {
+    type: string
+    sql: ${TABLE}.hubspot_cookie ;;
+  }
 
-dimension: first_hit_ref_domain {
-type: string
-sql: ${TABLE}.first_hit_ref_domain ;;
-}
+  dimension: isp {
+    type: string
+    sql: ${TABLE}.isp ;;
+  }
 
-dimension: first_hit_ref_type {
-type: string
-sql: ${TABLE}.first_hit_ref_type ;;
-}
+  dimension: language {
+    type: string
+    sql: ${TABLE}.language ;;
+  }
 
-dimension: first_hit_referrer {
-type: string
-sql: ${TABLE}.first_hit_referrer ;;
-}
+  dimension: local_hit_time_end {
+    type: string
+    sql: ${TABLE}.local_hit_time_end ;;
+  }
 
-dimension: geo_city {
-type: string
-sql: ${TABLE}.geo_city ;;
-}
+  dimension: local_hit_time_start {
+    type: string
+    sql: ${TABLE}.local_hit_time_start ;;
+  }
 
-dimension: geo_country_initials {
-type: string
-sql: ${TABLE}.geo_country_initials ;;
-}
+  dimension: mcvisid {
+    type: string
+    sql: ${TABLE}.mcvisid ;;
+  }
 
-dimension: geo_demographic_area {
-type: string
-sql: ${TABLE}.geo_demographic_area ;;
-}
+  dimension: new_visit {
+    type: number
+    sql: ${TABLE}.new_visit ;;
+  }
 
-dimension: geo_region {
-type: string
-sql: ${TABLE}.geo_region ;;
-}
+  dimension: num_pages {
+    type: number
+    sql: ${TABLE}.num_pages ;;
+  }
 
-dimension: geo_zip {
-type: string
-sql: ${TABLE}.geo_zip ;;
-}
+  dimension: os {
+    type: string
+    sql: ${TABLE}.os ;;
+  }
 
-dimension: language {
-type: string
-sql: ${TABLE}.language ;;
-}
+  dimension: page_event {
+    type: string
+    sql: ${TABLE}.page_event ;;
+  }
 
-dimension: mcvisid {
-type: string
-sql: ${TABLE}.mcvisid ;;
-}
+  dimension: page_tracking_link {
+    type: string
+    sql: ${TABLE}.page_tracking_link ;;
+  }
 
-dimension: new_visit {
-type: number
-sql: ${TABLE}.new_visit ;;
-}
+  dimension: pagename {
+    type: string
+    sql: ${TABLE}.pagename ;;
+  }
 
-dimension: page_event {
-type: string
-sql: ${TABLE}.page_event ;;
-}
+  dimension: paid_search {
+    type: number
+    sql: ${TABLE}.paid_search ;;
+  }
 
-dimension: page_tracking_link {
-type: string
-sql: ${TABLE}.page_tracking_link ;;
-}
+  dimension: persistent_cookie {
+    type: string
+    sql: ${TABLE}.persistent_cookie ;;
+  }
 
-dimension: pagename {
-type: string
-sql: ${TABLE}.pagename ;;
-}
+  dimension: portrait_mode {
+    type: number
+    sql: ${TABLE}.portrait_mode ;;
+  }
 
-dimension: persistent_cookie {
-type: string
-sql: ${TABLE}.persistent_cookie ;;
-}
+  dimension: ref_domain {
+    type: string
+    sql: ${TABLE}.ref_domain ;;
+  }
 
-dimension: paid_search {
-type: number
-sql: ${TABLE}.paid_search ;;
-}
+  dimension: referrer {
+    type: string
+    sql: ${TABLE}.referrer ;;
+  }
 
-dimension: hubspot_cookie {
-type: string
-sql: ${TABLE}.hubspot_cookie ;;
-}
+  dimension: referrer_type {
+    type: string
+    sql: ${TABLE}.referrer_type ;;
+  }
 
-dimension: referrer {
-type: string
-sql: ${TABLE}.referrer ;;
-}
+  dimension: resolution {
+    type: string
+    sql: ${TABLE}.resolution ;;
+  }
 
-dimension: referrer_type {
-type: string
-sql: ${TABLE}.referrer_type ;;
-}
+  dimension: search_engine {
+    type: string
+    sql: ${TABLE}.search_engine ;;
+  }
 
-dimension: resolution {
-type: string
-sql: ${TABLE}.resolution ;;
-}
+  dimension: search_page_rank {
+    type: number
+    sql: ${TABLE}.search_page_rank ;;
+  }
 
-dimension: search_page_rank {
-type: number
-sql: ${TABLE}.search_page_rank ;;
-}
+  dimension: session_duration_in_sec {
+    type: number
+    sql: ${TABLE}.session_duration_in_sec ;;
+  }
 
-dimension: search_engine {
-type: string
-sql: ${TABLE}.search_engine ;;
-}
+  dimension_group: session_end_dt {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.session_end_dt ;;
+  }
 
-dimension: local_hit_time_start {
-type: string
-sql: ${TABLE}.local_hit_time_start ;;
-}
+  dimension: session_id {
+    type: string
+    sql: ${TABLE}.session_id ;;
+  }
 
-dimension: local_hit_time_end {
-type: string
-sql: ${TABLE}.local_hit_time_end ;;
-}
+  dimension_group: session_start_dt {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.session_start_dt ;;
+  }
 
-dimension: user_agent {
-type: string
-sql: ${TABLE}.user_agent ;;
-}
+  dimension: user_agent {
+    type: string
+    sql: ${TABLE}.user_agent ;;
+  }
 
-dimension: visit_num {
-type: number
-sql: ${TABLE}.visit_num ;;
-}
+  dimension: visit_end_time_gmt {
+    type: string
+    sql: ${TABLE}.visit_end_time_gmt ;;
+  }
 
-dimension: visit_keywords {
-type: string
-sql: ${TABLE}.visit_keywords ;;
-}
+  dimension: visit_keywords {
+    type: string
+    sql: ${TABLE}.visit_keywords ;;
+  }
 
-dimension: visit_page_hits {
-type: number
-sql: ${TABLE}.visit_page_hits ;;
-}
+  dimension: visit_num {
+    type: number
+    sql: ${TABLE}.visit_num ;;
+  }
 
-dimension: visit_ref_domain {
-type: string
-sql: ${TABLE}.visit_ref_domain ;;
-}
+  dimension: visit_page_hits {
+    type: number
+    sql: ${TABLE}.visit_page_hits ;;
+  }
 
-dimension: visit_ref_type {
-type: string
-sql: ${TABLE}.visit_ref_type ;;
-}
+  dimension: visit_ref_domain {
+    type: string
+    sql: ${TABLE}.visit_ref_domain ;;
+  }
 
-dimension: visit_referrer {
-type: string
-sql: ${TABLE}.visit_referrer ;;
-}
+  dimension: visit_ref_type {
+    type: string
+    sql: ${TABLE}.visit_ref_type ;;
+  }
 
-dimension: visit_search_engine {
-type: string
-sql: ${TABLE}.visit_search_engine ;;
-}
+  dimension: visit_referrer {
+    type: string
+    sql: ${TABLE}.visit_referrer ;;
+  }
 
-dimension: visit_start_page {
-type: string
-sql: ${TABLE}.visit_start_page ;;
-}
+  dimension: visit_search_engine {
+    type: string
+    sql: ${TABLE}.visit_search_engine ;;
+  }
 
-dimension: visit_start_time_gmt {
-type: string
-sql: ${TABLE}.visit_start_time_gmt ;;
-}
+  dimension: visit_start_page {
+    type: string
+    sql: ${TABLE}.visit_start_page ;;
+  }
 
-dimension: visit_end_time_gmt {
-type: string
-sql: ${TABLE}.visit_end_time_gmt ;;
-}
+  dimension: visit_start_time_gmt {
+    type: string
+    sql: ${TABLE}.visit_start_time_gmt ;;
+  }
 
-dimension: weekly_visitor {
-type: number
-sql: ${TABLE}.weekly_visitor ;;
-}
+  dimension: weekly_visitor {
+    type: number
+    sql: ${TABLE}.weekly_visitor ;;
+  }
 
-dimension: yearly_visitor {
-type: number
-sql: ${TABLE}.yearly_visitor ;;
-}
+  dimension: yearly_visitor {
+    type: number
+    sql: ${TABLE}.yearly_visitor ;;
+  }
 
-measure: count {
-type: count
-drill_fields: []
-}
+  measure: count {
+    type: count
+    drill_fields: [first_hit_pagename, pagename]
+  }
 }
