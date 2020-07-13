@@ -88,6 +88,20 @@ view: demo_mb_stg_customer_profile_data {
           ELSE 'Known' END ;;
   }
 
+  dimension: address_known {
+    type: string
+    sql: CASE
+          WHEN f_neustar_enriched_dataset.e1_segment = '105' THEN 'Unknown'
+          ELSE 'Unknown' END ;;
+  }
+
+  dimension: phone_known {
+    type: string
+    sql: CASE
+          WHEN f_neustar_enriched_dataset.customer_phone_number = '105' THEN 'Unknown'
+          ELSE 'Unknown' END ;;
+  }
+
   dimension: offline_campaign_profile{
     type: string
     sql: CASE
