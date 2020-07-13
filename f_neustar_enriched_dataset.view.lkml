@@ -556,6 +556,26 @@ view: f_neustar_enriched_dataset {
          ELSE 'Known' END ;;
   }
 
+  dimension: address_known {
+    type: string
+    sql: CASE
+         WHEN ${TABLE}.customer_addressline_one = '' THEN 'Unknown'
+         WHEN ${TABLE}.customer_addressline_one = '*' THEN 'Unknown'
+         WHEN ${TABLE}.customer_addressline_one IS NULL THEN 'Unknown'
+         WHEN LENGTH(${TABLE}.customer_addressline_one) = 0 THEN 'Unknown'
+         ELSE 'Known' END ;;
+  }
+
+  dimension: phone_known {
+    type: string
+    sql: CASE
+         WHEN ${TABLE}.customer_phone_number = '' THEN 'Unknown'
+         WHEN ${TABLE}.customer_phone_number = '*' THEN 'Unknown'
+         WHEN ${TABLE}.customer_phone_number IS NULL THEN 'Unknown'
+         WHEN LENGTH(${TABLE}.customer_phone_number) = 0 THEN 'Unknown'
+         ELSE 'Known' END ;;
+  }
+
   dimension: zip_known {
     type: string
     sql: CASE
