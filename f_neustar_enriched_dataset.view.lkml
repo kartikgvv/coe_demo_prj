@@ -56,6 +56,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_addressline_one {
     type: string
     sql: ${TABLE}.customer_addressline_one ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_addressline_two {
@@ -443,6 +444,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_phone_number {
     type: string
     sql: ${TABLE}.customer_phone_number ;;
+    html:   <p style="color:#eff3f6; font-weight: bold; background: #05CC79;">{{ value }}</p>;;
   }
 
   dimension: customer_premium_credit_card {
