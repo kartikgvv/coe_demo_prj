@@ -105,7 +105,7 @@ view: demo_mb_stg_customer_profile_data {
   dimension: offline_campaign_profile{
     type: string
     sql: CASE
-          WHEN ${name_known} = 'Known' AND ${zip_known} = 'Known' THEN 'Available'
+          WHEN f_neustar_enriched_dataset.e1_segment = '105' THEN 'Unavailable'
           ELSE 'Unavailable' END ;;
   }
 

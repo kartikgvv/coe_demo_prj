@@ -638,7 +638,7 @@ view: f_neustar_enriched_dataset {
 dimension: offline_campaign_profile{
   type: string
   sql: CASE
-          WHEN ${name_known} = 'Known' AND ${zip_known} = 'Known' THEN 'Available'
+          WHEN ${name_known} = 'Known' AND ${zip_known} = 'Known' AND ${address_known} = 'Known' AND ${phone_known} = 'Known'THEN 'Available'
           ELSE 'Unavailable' END ;;
 }
 
