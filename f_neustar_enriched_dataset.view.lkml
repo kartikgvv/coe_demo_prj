@@ -82,7 +82,12 @@ view: f_neustar_enriched_dataset {
 
   dimension: customer_buying_power_score {
     type: string
-    sql: ${TABLE}.customer_buying_power_score ;;
+    sql: CASE
+    WHEN ${TABLE}.customer_buying_power_score = '1A' OR ${TABLE}.customer_buying_power_score = '1B' OR ${TABLE}.customer_buying_power_score = '1C' OR ${TABLE}.customer_buying_power_score = '2A' OR ${TABLE}.customer_buying_power_score = '2B' OR ${TABLE}.customer_buying_power_score = '3A' OR ${TABLE}.customer_buying_power_score = '3B' OR ${TABLE}.customer_buying_power_score = '4A' OR ${TABLE}.customer_buying_power_score = '5A' THEN 'Premium'
+    WHEN ${TABLE}.customer_buying_power_score = '1D' OR ${TABLE}.customer_buying_power_score = '2C' OR ${TABLE}.customer_buying_power_score = '2D' OR ${TABLE}.customer_buying_power_score = '3C' OR ${TABLE}.customer_buying_power_score = '3D' OR ${TABLE}.customer_buying_power_score = '4B' OR ${TABLE}.customer_buying_power_score = '4C' OR ${TABLE}.customer_buying_power_score = '4D' OR ${TABLE}.customer_buying_power_score = '5B' OR ${TABLE}.customer_buying_power_score = '5C' OR ${TABLE}.customer_buying_power_score = '5D' OR ${TABLE}.customer_buying_power_score = '6A' OR ${TABLE}.customer_buying_power_score = '6B' or ${TABLE}.customer_buying_power_score = '6C' OR ${TABLE}.customer_buying_power_score = '7A' OR ${TABLE}.customer_buying_power_score = '7B' OR ${TABLE}.customer_buying_power_score = '8A' THEN 'Value'
+    WHEN ${TABLE}.customer_buying_power_score = '6D' OR ${TABLE}.customer_buying_power_score = '7C' OR ${TABLE}.customer_buying_power_score = '7D' OR ${TABLE}.customer_buying_power_score = '8B' OR ${TABLE}.customer_buying_power_score = '8C' OR ${TABLE}.customer_buying_power_score = '8D' OR ${TABLE}.customer_buying_power_score = '9A' OR ${TABLE}.customer_buying_power_score = '9B' OR ${TABLE}.customer_buying_power_score = '9C' OR ${TABLE}.customer_buying_power_score = '9D' THEN 'Budget'
+    ELSE 'null' END
+;;
   }
 
   dimension: customer_census_2010_track_and_block_group {
