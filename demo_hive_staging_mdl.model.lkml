@@ -245,3 +245,44 @@ explore: demo_stg_android_uninstalls_report {
 
   view_label: ""
 }
+
+
+explore: demo_stg_conviva_video_analytics {
+  label: "Stage Dataset for Conviva Video Analytics"
+
+  description: "Stage Dataset for Conviva Video Analytics video analytics data"
+
+  view_label: ""
+}
+
+explore: demo_stg_google_analytics_user_session_data {
+  label: "Stage Dataset for Google Analytics User Session Data"
+
+  description: "Stage Dataset for Google Analytics User Session Data User Session Data of the video views with information of the sources, time spent etc"
+
+  view_label: ""
+}
+
+explore: demo_user_browsing_video_mapping_data {
+  label: "User Browsing Video Mapping Data"
+
+  description: "mapping data between user browsing behavior with user video consumption behavior"
+
+  view_label: ""
+}
+
+explore: demo_stg_video_content_data {
+  label: "Stage Dataset for Video Content Data"
+
+  description: "Stage Dataset for Video Content Data Video Content Details Data "
+
+  view_label: ""
+}
+
+explore: demo_stg_user_subscription_data {
+  label: "Stage Dataset for User Subscription Data"
+
+  description: "Stage Dataset for User Subscription Data details of the subscription packs user have taken"
+
+  view_label: ""
+}

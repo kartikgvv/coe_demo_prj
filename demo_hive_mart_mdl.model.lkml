@@ -100,3 +100,12 @@ explore: demo_vw_crm_vid_utk_mapping {
 
   view_label: ""
 }
+
+
+explore: demo_f_conviva_video_views_partitioned {
+  label: "F_Conviva_Video_Views_Partitioned"
+
+  description: "transformed conviva base table to extract video views per content type"
+
+  view_label: ""
+}
