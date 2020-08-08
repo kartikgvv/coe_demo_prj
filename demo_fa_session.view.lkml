@@ -198,6 +198,16 @@ view: demo_fa_session {
     sql: ${TABLE}.session_duration_in_sec ;;
   }
 
+  dimension: session_duration_in_min {
+    type: string
+    sql: CASE
+    WHEN ${TABLE}.session_duration_in_sec <+60 THEN '1 min or less'
+    WHEN ${TABLE}.session_duration_in_sec >60 AND ${TABLE}.session_duration_in_sec <120 THEN '1 - 2 min'
+    WHEN ${TABLE}.session_duration_in_sec >120 AND ${TABLE}.session_duration_in_sec <300 THEN '2 - 5 min'
+    WHEN ${TABLE}.session_duration_in_sec >300 AND ${TABLE}.session_duration_in_sec <600 THEN '5 - 10 min'
+    ELSE '10+ min' END;;
+  }
+
   dimension_group: session_end_dt {
     type: time
     timeframes: [
