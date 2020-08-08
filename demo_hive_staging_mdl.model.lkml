@@ -270,3 +270,11 @@ explore: demo_user_browsing_video_mapping_data {
 
   view_label: ""
 }
+
+explore: demo_stg_video_content_data {
+  label: "Stage Dataset for Video Content Data"
+
+  description: "Stage Dataset for Video Content Data Video Content Details Data "
+
+  view_label: ""
+}
