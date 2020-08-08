@@ -278,3 +278,11 @@ explore: demo_stg_video_content_data {
 
   view_label: ""
 }
+
+explore: demo_stg_user_subscription_data {
+  label: "Stage Dataset for User Subscription Data"
+
+  description: "Stage Dataset for User Subscription Data details of the subscription packs user have taken"
+
+  view_label: ""
+}
