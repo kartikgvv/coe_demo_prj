@@ -245,3 +245,12 @@ explore: demo_stg_android_uninstalls_report {
 
   view_label: ""
 }
+
+
+explore: demo_stg_conviva_video_analytics {
+  label: "Stage Dataset for Conviva Video Analytics"
+
+  description: "Stage Dataset for Conviva Video Analytics video analytics data"
+
+  view_label: ""
+}
