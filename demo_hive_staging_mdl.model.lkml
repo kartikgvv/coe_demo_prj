@@ -254,3 +254,11 @@ explore: demo_stg_conviva_video_analytics {
 
   view_label: ""
 }
+
+explore: demo_stg_google_analytics_user_session_data {
+  label: "Stage Dataset for Google Analytics User Session Data"
+
+  description: "Stage Dataset for Google Analytics User Session Data User Session Data of the video views with information of the sources, time spent etc"
+
+  view_label: ""
+}
