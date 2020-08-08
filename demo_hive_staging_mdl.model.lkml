@@ -262,3 +262,11 @@ explore: demo_stg_google_analytics_user_session_data {
 
   view_label: ""
 }
+
+explore: demo_user_browsing_video_mapping_data {
+  label: "User Browsing Video Mapping Data"
+
+  description: "mapping data between user browsing behavior with user video consumption behavior"
+
+  view_label: ""
+}
