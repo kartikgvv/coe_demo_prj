@@ -110,6 +110,31 @@ explore: demo_f_conviva_video_views_partitioned {
   view_label: ""
 }
 
+explore: d_individual_attribute_subscription_type {
+  label: "Video Subscription Type"
+
+  description: "Type of subscription taken by the user"
+
+  view_label: ""
+}
+
+explore: d_individual_attribute_1000000043_viewtime {
+  label: "Video View Time "
+
+  description: "Video View Time"
+
+  view_label: ""
+}
+
+explore: d_individual_attribute_1000000039_genre {
+  label: "Video Genre "
+
+  description: "Type of Video Genre"
+
+  view_label: ""
+}
+
+
 explore: demo_vw_user_video_aggregation_data {
   label: "User Video aggregation Data "
 
