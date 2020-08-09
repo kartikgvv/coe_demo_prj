@@ -109,3 +109,11 @@ explore: demo_f_conviva_video_views_partitioned {
 
   view_label: ""
 }
+
+explore: demo_vw_user_video_aggregation_data {
+  label: "User Video aggregation Data "
+
+  description: "User Video aggregation Data "
+
+  view_label: ""
+}
