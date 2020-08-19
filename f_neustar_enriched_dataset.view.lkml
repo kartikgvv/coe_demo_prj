@@ -709,22 +709,31 @@ dimension: offline_campaign_profile{
   dimension: engagement_score {
     type: number
     sql: CASE
-          WHEN ${e1_segment} = '105' THEN '8.4'
-          ELSE 'Unknown' END ;;
+          WHEN ${customer_buying_power_score} = 'Premium' THEN (rand()*8.5)
+          WHEN ${customer_buying_power_score} = 'Value' THEN (rand()*7.5)
+          WHEN ${customer_buying_power_score} = 'Budget' THEN (rand()*6.5)
+          ELSE 0.0 END ;;
+    value_format: "0.0"
   }
 
   dimension: ltv {
     type: number
     sql: CASE
-          WHEN ${e1_segment} = '105' THEN '7.1'
-          ELSE 'Unknown' END ;;
+    WHEN ${customer_buying_power_score} = 'Premium' THEN (rand()*9.1)
+    WHEN ${customer_buying_power_score} = 'Value' THEN (rand()*8.2)
+    WHEN ${customer_buying_power_score} = 'Budget' THEN (rand()*7.3)
+    ELSE 0.0 END ;;
+    value_format: "0.0"
   }
 
   dimension: churn_risk {
     type: number
     sql: CASE
-          WHEN ${e1_segment} = '105' THEN '6.6'
-          ELSE 'Unknown' END ;;
+    WHEN ${customer_buying_power_score} = 'Premium' THEN (rand()*7.4)
+    WHEN ${customer_buying_power_score} = 'Value' THEN (rand()*6.5)
+    WHEN ${customer_buying_power_score} = 'Budget' THEN (rand()*5.6)
+    ELSE 0.0 END ;;
+    value_format: "0.0"
   }
 
   dimension: high_engager {
