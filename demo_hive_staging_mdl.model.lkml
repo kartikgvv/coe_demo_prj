@@ -115,10 +115,32 @@ explore: demo_mb_stg_customer_profile_data{
     sql_on: ${demo_mb_stg_customer_profile_data.mdpid}=${f_neustar_enriched_dataset.mdpid} ;;
     relationship: one_to_one
   }
+  join: stg_adobe_campaign_openclicks_data {
+    type: inner
+    sql_on: ${demo_mb_stg_customer_profile_data.mdpid}=${stg_adobe_campaign_openclicks_data.swid}  ;;
+    relationship: one_to_one
+  }
+  join: email_campaign_type_mapping {
+    type: inner
+    sql_on: ${demo_mb_stg_customer_profile_data.mdpid}=${email_campaign_type_mapping.mdpid}  ;;
+    relationship: one_to_one
+  }
+  join: demo_vw_db_mcvisid_mdpid {
+    type: inner
+    sql_on: ${demo_mb_stg_customer_profile_data.mdpid}=${demo_vw_db_mcvisid_mdpid.master_digital_profile_id} ;;
+    relationship: one_to_one
+  }
+  join: demo_fa_session {
+    type: inner
+    sql_on: ${demo_vw_db_mcvisid_mdpid.master_digital_profile_id}=${demo_fa_session.mcvisid} ;;
+    relationship: one_to_one
+  }
+
   label: "MB Customer_Profile_Enriched"
 
   view_label: "Customer Profile Data"
 }
+
 
 
 explore: demo_stg_campaign_response_bounce {
