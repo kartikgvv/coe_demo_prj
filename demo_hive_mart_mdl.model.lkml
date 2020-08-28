@@ -142,3 +142,12 @@ explore: demo_vw_user_video_aggregation_data {
 
   view_label: ""
 }
+
+
+explore: demo_vw_allpagesvisited {
+  label: "AllPagesVisited"
+
+  description: "List of all pages visited on the website. Individual ids used - hubspot_cookie, mcvisid"
+
+  view_label: ""
+}
