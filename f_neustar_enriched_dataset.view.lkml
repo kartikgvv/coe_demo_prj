@@ -10,7 +10,10 @@ view: f_neustar_enriched_dataset {
 
   dimension: current_email_linkage_score {
     type: number
-    sql: CAST(${TABLE}.current_email_linkage_score AS DECIMAL(28, 16)) ;;
+    sql: CASE
+    WHEN ${TABLE}.current_email_linkage_score = '(null)' THEN 0
+    ELSE CAST(${TABLE}.current_email_linkage_score AS DECIMAL(28, 16))
+    END;;
   }
 
   dimension: customer_activity_date {
