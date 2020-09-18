@@ -308,3 +308,12 @@ explore: stg_user_subscription_data {
 
   view_label: ""
 }
+
+
+explore: demo_stg_cif_file_data {
+  label: "Stage Dataset for CIF File Data"
+
+  description: "Stage Dataset for CIF File Data CIF File Data"
+
+  view_label: ""
+}
