@@ -159,3 +159,11 @@ explore: demo_vw_crm_website_visitor_mapping {
 
   view_label: ""
 }
+
+explore: demo_test_attribute_pivot_table {
+  label: "Test_Attribute_Pivot_Table"
+
+  description: "Test_Attribute_Pivot_Table"
+
+  view_label: ""
+}
