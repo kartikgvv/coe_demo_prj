@@ -86,11 +86,12 @@ view: f_neustar_enriched_dataset {
   dimension: customer_buying_power_score {
     type: string
     sql: CASE
-    WHEN ${TABLE}.customer_buying_power_score = '1A' OR ${TABLE}.customer_buying_power_score = '1B' OR ${TABLE}.customer_buying_power_score = '1C' OR ${TABLE}.customer_buying_power_score = '2A' OR ${TABLE}.customer_buying_power_score = '2B' OR ${TABLE}.customer_buying_power_score = '3A' OR ${TABLE}.customer_buying_power_score = '3B' OR ${TABLE}.customer_buying_power_score = '4A' OR ${TABLE}.customer_buying_power_score = '5A' THEN 'Premium'
-    WHEN ${TABLE}.customer_buying_power_score = '1D' OR ${TABLE}.customer_buying_power_score = '2C' OR ${TABLE}.customer_buying_power_score = '2D' OR ${TABLE}.customer_buying_power_score = '3C' OR ${TABLE}.customer_buying_power_score = '3D' OR ${TABLE}.customer_buying_power_score = '4B' OR ${TABLE}.customer_buying_power_score = '4C' OR ${TABLE}.customer_buying_power_score = '4D' OR ${TABLE}.customer_buying_power_score = '5B' OR ${TABLE}.customer_buying_power_score = '5C' OR ${TABLE}.customer_buying_power_score = '5D' OR ${TABLE}.customer_buying_power_score = '6A' OR ${TABLE}.customer_buying_power_score = '6B' or ${TABLE}.customer_buying_power_score = '6C' OR ${TABLE}.customer_buying_power_score = '7A' OR ${TABLE}.customer_buying_power_score = '7B' OR ${TABLE}.customer_buying_power_score = '8A' THEN 'Value'
-    WHEN ${TABLE}.customer_buying_power_score = '6D' OR ${TABLE}.customer_buying_power_score = '7C' OR ${TABLE}.customer_buying_power_score = '7D' OR ${TABLE}.customer_buying_power_score = '8B' OR ${TABLE}.customer_buying_power_score = '8C' OR ${TABLE}.customer_buying_power_score = '8D' OR ${TABLE}.customer_buying_power_score = '9A' OR ${TABLE}.customer_buying_power_score = '9B' OR ${TABLE}.customer_buying_power_score = '9C' OR ${TABLE}.customer_buying_power_score = '9D' THEN 'Budget'
-    ELSE 'null' END
-;;
+        WHEN ${TABLE}.customer_buying_power_score = '1A' OR ${TABLE}.customer_buying_power_score = '1B' OR ${TABLE}.customer_buying_power_score = '1C' OR ${TABLE}.customer_buying_power_score = '2A' OR ${TABLE}.customer_buying_power_score = '2B' OR ${TABLE}.customer_buying_power_score = '3A' OR ${TABLE}.customer_buying_power_score = '3B' OR ${TABLE}.customer_buying_power_score = '4A' OR ${TABLE}.customer_buying_power_score = '5A' THEN 'Premium'
+        WHEN ${TABLE}.customer_buying_power_score = '1D' OR ${TABLE}.customer_buying_power_score = '2C' OR ${TABLE}.customer_buying_power_score = '2D' OR ${TABLE}.customer_buying_power_score = '3C' OR ${TABLE}.customer_buying_power_score = '3D' OR ${TABLE}.customer_buying_power_score = '4B' OR ${TABLE}.customer_buying_power_score = '4C' OR ${TABLE}.customer_buying_power_score = '4D' OR ${TABLE}.customer_buying_power_score = '5B' OR ${TABLE}.customer_buying_power_score = '5C' OR ${TABLE}.customer_buying_power_score = '5D' OR ${TABLE}.customer_buying_power_score = '6A' OR ${TABLE}.customer_buying_power_score = '6B' or ${TABLE}.customer_buying_power_score = '6C' OR ${TABLE}.customer_buying_power_score = '7A' OR ${TABLE}.customer_buying_power_score = '7B' OR ${TABLE}.customer_buying_power_score = '8A' THEN 'Value'
+        WHEN ${TABLE}.customer_buying_power_score = '6D' OR ${TABLE}.customer_buying_power_score = '7C' OR ${TABLE}.customer_buying_power_score = '7D' OR ${TABLE}.customer_buying_power_score = '8B' OR ${TABLE}.customer_buying_power_score = '8C' OR ${TABLE}.customer_buying_power_score = '8D' OR ${TABLE}.customer_buying_power_score = '9A' OR ${TABLE}.customer_buying_power_score = '9B' OR ${TABLE}.customer_buying_power_score = '9C' OR ${TABLE}.customer_buying_power_score = '9D' THEN 'Budget'
+        ELSE 'null' END
+        ;;
+    suggestions: ["Premium","Value","Budget"]
   }
 
   dimension: customer_census_2010_track_and_block_group {
@@ -206,6 +207,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_country_size_code {
     type: string
     sql: ${TABLE}.customer_country_size_code ;;
+    suggestions: ["Counties in Metro Areas with population less than 250,000","Counties in Metro Areas with population 250,000-1,000,000","Counties in Metro Areas with population 1,000,000 or more","Urban population of 2,500 to 19,999, adjacent to a Metro Area","Urban population of 20,000 or more, adjacent to a Metro Area","Urban population of 2,500 to 19,999, not adjacent to a Metro Area","Urban population of 20,000 or more, not adjacent to a Metro Area","Completely rural or less than 2,500 urban population adjacent to a Metro Area","Completely rural or less than 2,500 urban population, not adjacent to a Metro Area"]
   }
 
   dimension: customer_current_home_value {
@@ -257,6 +259,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_estimated_household_income_broad {
     type: string
     sql: ${TABLE}.customer_estimated_household_income_broad ;;
+    suggestions: ["$1,000 - $14,999","$15,000 - $24,999","$25,000 - $34,999","$35,000 - $49,999","$50,000 - $74,999","$75,000 - $99,999","$100,000 - $124,999","$125,000 - $149,999","$150,000 - $174,999","$175,000 - $199,999","$200,000 - $249,999","$250,000+"]
   }
 
   dimension: customer_estimated_household_income_narrow {
@@ -322,6 +325,7 @@ view: f_neustar_enriched_dataset {
   dimension: customer_household_composition {
     type: string
     sql: ${TABLE}.customer_household_composition ;;
+    suggestions: ["2 or more adult males","1 adult female","1 adult male","1 adult female and 1 adult male","2 or more adult males and children","Unknown","2 or more adult females","1 adult female,1 adult male and children","2 or more adult females and children","1 adult female and children present","1 adult male and children present"]
   }
 
   dimension: customer_household_e1f_segment {
@@ -601,6 +605,7 @@ view: f_neustar_enriched_dataset {
           WHEN demo_mb_stg_customer_profile_data.gender = 'U' AND ${TABLE}.customer_gender = 'Male' THEN 'M'
           WHEN demo_mb_stg_customer_profile_data.gender = 'U' AND ${TABLE}.customer_gender = 'Female' THEN 'F'
           ELSE 'U' END ;;
+    suggestions: ["M","F"]
   }
 
   dimension: corrected_zip {
@@ -636,6 +641,7 @@ view: f_neustar_enriched_dataset {
           WHEN  ${customer_age} >= 55 AND ${customer_age} < 65 THEN '55 - 65'
           WHEN  ${customer_age} < 64 THEN '65+'
           ELSE 'Unknown' END ;;
+    suggestions: ["24 and Under","25 - 35","35 - 45","45 - 55","55 - 65","65+"]
   }
 
   measure: age_range_percentage {
