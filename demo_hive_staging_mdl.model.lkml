@@ -308,3 +308,20 @@ explore: stg_user_subscription_data {
 
   view_label: ""
 }
+
+
+explore: demo_stg_cif_file_data {
+  label: "Stage Dataset for CIF File Data"
+
+  description: "Stage Dataset for CIF File Data CIF File Data"
+
+  view_label: ""
+}
+
+explore: demo_vw_neustar_cif_mdpid_mapping {
+  label: "Neustar CIF MDPID mapping"
+
+  description: "mapping key of neustar cif file with the MDPID"
+
+  view_label: ""
+}

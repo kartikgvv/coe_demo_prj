@@ -151,3 +151,19 @@ explore: demo_vw_allpagesvisited {
 
   view_label: ""
 }
+
+explore: demo_vw_crm_website_visitor_mapping {
+  label: "crm_website_visitor_mapping"
+
+  description: "Mapping hubspot data with adobe analytics mcvisd id"
+
+  view_label: ""
+}
+
+explore: demo_test_attribute_pivot_table {
+  label: "Test_Attribute_Pivot_Table"
+
+  description: "Test_Attribute_Pivot_Table"
+
+  view_label: ""
+}
